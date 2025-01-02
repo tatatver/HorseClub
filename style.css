@@ -4,9 +4,10 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  font-family: "Roboto";
   /* font-family: "TT Hoves", sans-serif; */
   color: #222222;
-  /* outline: 2px solid red; */
+  outline: 2px solid red;
 }
 
 body {
@@ -14,12 +15,16 @@ body {
   margin: 0 auto; /* Центрирование */
 }
 /*header start*/
-header {
+.bgHeader {
+  background-image: url(./img/background1.jpg);
+  width: 1921px;
+  height: 948px;
+}
+.headerMenu {
   margin: 9px 375px 88px;
   display: flex;
   width: 1170px;
   height: 60px;
-  font-family: "Roboto";
 }
 .logo {
   width: 152px;
@@ -36,6 +41,12 @@ header {
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 400;
+  transition: all 0.3s ease;
+}
+.menu h4:hover {
+  font-size: 13px;
+  text-decoration: underline #008139;
+  text-underline-offset: 10px; /* Расстояние между текстом и линией */
 }
 .phoneNumber {
   padding-top: 16px;
@@ -47,27 +58,282 @@ header {
   width: 16px;
   margin-right: 10px;
 }
-.phoneNumberInfo{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px 0;
+.phoneNumberInfo {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-items: flex-start;
+  gap: 8px 0;
 }
 .phoneNumberInfo p:nth-child(1) {
-  width: 160px;
+  width: 161px;
   font-size: 18px;
   line-height: 117%;
   font-weight: 700;
+  margin: 0;
 }
 .phoneNumberInfo p:nth-child(2) {
   width: 145px;
   font-size: 13px;
   color: #7d808a;
+  margin: 0;
+}
+
+.worldHorse {
+  margin-left: 376px;
+  margin-bottom: 449px;
+}
+.worldHorse h1 {
+  width: 613px;
+  font-family: "Philosopher"; /*скачать шрифт*/
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 107%;
+}
+.worldHorse p {
+  width: 506px; /*477 по макету*/
+  font-family: "Alegreya Sans"; /*скачать шрифт*/
+  font-size: 24px;
+  font-weight: 400;
+  color: #646464;
+  line-height: 140%;
+  margin: 40px 90px 42px 46px;
+}
+.primary {
+  padding: 21px 75px;
+  width: 270px;
+  height: 70px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  color: #6a5300;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    #fff9c4,
+    #ffc107
+  ); /* Градиентный фон */
+  box-shadow: 0 4px 0 #b28d04; /* Тень кнопки */
+  margin-bottom: 449px;
 }
 /*header finish*/
 
-.bg {
-  background-image: url(./img/background1section.jpg);
-  /* width: 1921px;
-    height: 948px; */
+h2 {
+  font-size: 40px;
+  line-height: 90%;
+  font-weight: 400;
+  font-family: "Philosopher"; /*скачать шрифт*/
+  text-align: center;
+}
+
+/*О нашем клубе start*/
+.aboutUsTitle {
+  width: 268px;
+  margin: 0 826px 89px;
+}
+.aboutUsWrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 337px 185px 145px;
+}
+.aboutImg {
+  flex-basis: 870px;
+  flex-grow: 1;
+}
+.aboutUsInfo {
+  flex-grow: 1000;
+}
+.aboutUsCards {
+  display: grid;
+  grid-template-columns: 200px 230px;
+  grid-template-rows: 1fr 1fr;
+  gap: 24px 65px;
+  grid-template-areas:
+    "1100 50"
+    "20 15";
+}
+.cards:nth-child(1) {
+  grid-area: "1100";
+}
+.cards:nth-child(2) {
+  grid-area: "50";
+}
+.cards:nth-child(3) {
+  grid-area: "20";
+}
+.cards:nth-child(4) {
+  grid-area: "15";
+  width: 248px;
+}
+.cards h5 {
+  width: 102px;
+  height: 67px;
+  font-size: 42px;
+  font-weight: 700;
+  font-family: "Philosopher";
+  color: #008139;
+}
+.cards p {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 166%;
+}
+.aboutUsText {
+  width: 570px;
+  margin-top: 41px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 186%;
+  color: #7e7e7e;
+}
+
+/* Почему нас выбирают */
+.advantagesTitle {
+  margin-bottom: 60px;
+  text-align: center;
+}
+.advantagesTitle h2 {
+  margin-bottom: 25px;
+}
+h5 {
+  font-size: 15px;
+  line-height: 117%;
+  color: #363434;
+  font-weight: 300;
+}
+.advantages {
+  display: flex;
+  align-items: center;
+  gap: 0 29px;
+  width: 1171px;
+  margin: 0 374px 100px;
+}
+.adventagesCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 271px;
+  text-align: center;
+}
+.adventagesCards img {
+  width: 113px;
+  height: 100px;
+}
+.adventagesCards:nth-child(1) img {
+  width: 113px;
+  height: 95px;
+  margin-bottom: 24px;
+}
+.adventagesCards:nth-child(2) img {
+  width: 156px;
+  height: 98px;
+  margin-bottom: 23px;
+}
+.adventagesCards:nth-child(3) img {
+  width: 96px;
+  height: 118px;
+  margin-bottom: 14px;
+}
+.adventagesCards:nth-child(4) img {
+  width: 151px;
+  height: 124px;
+  margin-bottom: 7px;
+}
+.adventagesCards h3 {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 117%;
+  margin-bottom: 26px;
+}
+.adventagesCards p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 151%;
+  color: #7e7e7e;
+}
+
+/* Направления клуба */
+.bgDirection {
+  background-image: url(./img/background4section.png);
+}
+.directionTitle {
+  margin-bottom: 75px;
+  text-align: center;
+}
+.directionTitle h2 {
+  margin-bottom: 25px;
+}
+
+.directionWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 30px;
+  margin: 0 375px;
+}
+.directionCards {
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px #eaeaea;
+  display: flex;
+  flex-wrap: wrap;
+  width: 370px;
+  justify-content: center;
+}
+.directionCards:nth-child(odd) {
+  height: 399px;
+}
+.directionCards:nth-child(even) {
+  height: 474px;
+}
+.directionCards:nth-child(5) {
+  margin-top: 75px;
+}
+.directionCards img {
+  position: relative;
+  top: -25px;
+}
+.directionCards h3 {
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 117%; /*26.95-23*/
+  width: 237px;
+  text-align: center;
+}
+.directionborder {
+  height: 1px;
+  width: 26px;
+  background-color: #008139;
+  margin: 25px 150px;
+}
+.directionCards p {
+  width: 280px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 140%; /*21-15*/
+  color: #7e7e7e;
+  margin-bottom: 45px;
+}
+.bgDirection button {
+  margin: 50px 825px 421px;
+}
+.imgHorsedirection {
+  position: relative;
+}
+.clouds {
+  position: absolute;
+  top: 318px;
+  right: 0;
+}
+.girlonHorse {
+  position: absolute;
+  left: 138px;
+  bottom: 109px;
+}
+.boyonHorse {
+  position: absolute;
+  left: 1465px;
+  bottom: 109px;
 }

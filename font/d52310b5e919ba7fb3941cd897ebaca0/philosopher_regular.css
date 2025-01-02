@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Philosopher Regular';
+	src: url('../fonts/philosopher_regular.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/philosopher_regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/philosopher_regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/philosopher_regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/philosopher_regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/philosopher_regular.svg#philosopher_regular') format('svg'); /* Chrome < 4, Legacy iOS */
+}
