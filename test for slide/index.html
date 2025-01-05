@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Horse Club</title>
+    <link
+      rel="stylesheet"
+      href="./font/d52310b5e919ba7fb3941cd897ebaca0/philosopher_regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./splide-4.1.3/splide-4.1.3/dist/css/splide.min.css"
+    />
+  </head>
+
+  <body>
+    
+<!-- способ 1 -->
+<section class="splide visitor" aria-labelledby="carousel-heading">
+    <h2 class="visitorTitle">Наши посетители</h2>
+
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide visitorCard">
+          <div><img src="./img/visitor1.png" alt="Посетитель 1" /></div>
+          <div><img src="./img/visitor6.png" alt="Посетитель 2" /></div>
+        </li>
+        <li class="splide__slide visitorCard">
+          <div><img src="./img/visitor2.png" alt="Посетитель 3" /></div>
+          <div><img src="./img/visitor7.png" alt="Посетитель 4" /></div>
+        </li>
+        <li class="splide__slide visitorCard">
+          <div><img src="./img/visitor3.png" alt="Посетитель 5" /></div>
+          <div><img src="./img/visitor8.png" alt="Посетитель 6" /></div>
+        </li>
+        <li class="splide__slide visitorCard">
+          <div><img src="./img/visitor4.png" alt="Посетитель 7" /></div>
+          <div><img src="./img/visitor9.png" alt="Посетитель 8" /></div>
+        </li>
+        <li class="splide__slide visitorCard">
+          <div><img src="./img/visitor5.png" alt="Посетитель 9" /></div>
+          <div><img src="./img/visitor10.png" alt="Посетитель 10" /></div>
+        </li>
+
+        <li class="splide__slide visitorCard">
+          <div><img src="./img/visitor4.png" alt="Посетитель 1" /></div>
+          <div><img src="./img/visitor9.png" alt="Посетитель 2" /></div>
+        </li>
+        <li class="splide__slide visitorCard">
+          <div><img src="./img/visitor5.png" alt="Посетитель 1" /></div>
+          <div><img src="./img/visitor10.png" alt="Посетитель 2" /></div>
+        </li>
+
+
+      </ul>
+    </div>
+  </section>
+
+  <script src="./splide-4.1.3/splide-4.1.3/dist/js/splide.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var splide = new Splide(".splide.visitor", {
+        perPage: 5, // Показывать 5 карточек
+  gap: "20px", // Промежуток между карточками
+  breakpoints: {
+    768: {
+      perPage: 2, // На мобильных устройствах показывать по 2 карточки
+    },
+    1024: {
+      perPage: 3, // На планшетах показывать по 3 карточки
+    },
+  },
+});
+      splide.mount();
+    });
+  </script>
+
+
+
+
+<!-- как на макете, но не работает слайдер -->
+<section class="splide visitor" aria-labelledby="carousel-heading">
+    <h2 class="visitorTitle">Наши посетители</h2>
+
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <div class="visitorCard">
+            <img src="./img/visitor1.png" alt="" />
+            <img src="./img/visitor2.png" alt="" />
+            <img src="./img/visitor3.png" alt="" />
+            <img src="./img/visitor4.png" alt="" />
+            <img src="./img/visitor5.png" alt="" />
+            <img src="./img/visitor6.png" alt="" />
+            <img src="./img/visitor7.png" alt="" />
+            <img src="./img/visitor8.png" alt="" />
+            <img src="./img/visitor9.png" alt="" />
+            <img src="./img/visitor10.png" alt="" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="./splide-4.1.3/splide-4.1.3/dist/js/splide.min.js"></script>
+  <script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+      var splide = new Splide( '.splide.visitor', {
+        perPage: 1
+      } );
+      splide.mount();
+    } );
+  </script>
+</body>
+</html>

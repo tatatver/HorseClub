@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Horse Club</title>
-    <link rel="stylesheet" href="./font/d52310b5e919ba7fb3941cd897ebaca0/philosopher_regular.css">
+    <link
+      rel="stylesheet"
+      href="./font/d52310b5e919ba7fb3941cd897ebaca0/philosopher_regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./splide-4.1.3/splide-4.1.3/dist/css/splide.min.css"
+    />
   </head>
   <body>
     <!-- Окунитесь в мир 
@@ -35,6 +42,11 @@
         </p>
         <button class="primary">записаться</button>
       </div>
+      <img class="birdbg" src="./img/Чайки 1.png" alt="" />
+      <img class="horse1bg" src="./img/Лошадь 1.png" alt="" />
+      <img class="cloudbg" src="./img/cloud.png" alt="" />
+      <img class="treerightbg" src="./img/Куст справа 1.png" alt="" />
+      <img class="treeleftbg" src="./img/Куст слева 1.png" alt="" />
     </section>
 
     <!-- О нашем клубе -->
@@ -174,17 +186,223 @@
           </p>
         </div>
       </div>
-      <div class="imgHorsedirection">
-        <img src="./img/Девушка на лошади 1.png" alt="" class="girlonHorse" />
-        <img src="./img/Мальчик с лошадью 1.png" alt="" class="boyonHorse" />
-        <button class="primary">записаться</button>
-        <img src="./img/Облака 1.png" alt="" class="clouds" />
-      </div>
+      <button class="primary">записаться</button>
+      <img src="./img/girlonHorse.png" alt="" class="girlonHorse" />
+      <img src="./img/boyonHorse.png" alt="" class="boyonHorse" />
+      <img src="./img/cloud2.png" alt="" class="clouds" />
     </section>
 
     <!-- Наши посетители -->
-    <section class="bgDirection">
-      <h2>Наши посетители</h2>
+    <section>
+      <div class="splide visitor1" aria-labelledby="carousel-heading">
+        <h2 class="visitorTitle">Наши посетители</h2>
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor1.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor2.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor3.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor4.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor5.png" alt="" />
+            </li>
+            <!-- доп фотки -->
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor6.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor7.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor8.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor9.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor10.png" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="splide visitor2" aria-labelledby="carousel-heading">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor6.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor7.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor8.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor9.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor10.png" alt="" />
+            </li>
+            <!-- доп фотки -->
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor1.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor2.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor3.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor4.png" alt="" />
+            </li>
+            <li class="splide__slide visitorCard">
+              <img src="./img/visitor5.png" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="slider-buttons">
+        <button id="prevButton"><img src="./img/Vector.svg" alt="" /></button>
+        <button id="nextButton"><img src="./img/Vector.svg" alt="" /></button>
+      </div>
     </section>
+
+    <!-- Наши лошади -->
+    <section class="splide horse" aria-labelledby="carousel-heading">
+      <h2 class="ourHorseTitle">Наши лошади</h2>
+
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="ourHorseCards">
+              <img src="./img/horse1.png" alt="" />
+              <h4>Жазель</h4>
+              <div class="directionborder"></div>
+              <p>
+                Уроки профессиональной верховой езды для любителей и начинающих
+              </p>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="ourHorseCards">
+              <img src="./img/horse2.png" alt="" />
+              <h4>Юджин</h4>
+              <div class="directionborder"></div>
+              <p>
+                Уроки профессиональной верховой езды для любителей и начинающих
+              </p>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="ourHorseCards">
+              <img src="./img/horse3.png" alt="" />
+              <h4>Мелисса</h4>
+              <div class="directionborder"></div>
+              <p>
+                Уроки профессиональной верховой езды для любителей и начинающих
+              </p>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="ourHorseCards">
+              <img src="./img/horse4.png" alt="" />
+              <h4>Циан</h4>
+              <div class="directionborder"></div>
+              <p>
+                Уроки профессиональной верховой езды для любителей и начинающих
+              </p>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="ourHorseCards">
+              <img src="./img/horse5.png" alt="" />
+              <h4>Хесана</h4>
+              <div class="directionborder"></div>
+              <p>
+                Уроки профессиональной верховой езды для любителей и начинающих
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- Отвечаем на вопросы -->
+    <section class="BgSection7">
+     
+      <div class="QuestionForm">
+        <h2>Отвечаем на вопросы</h2>
+        <p>
+          Мы ответим на все ваши вопросы по телефону, или вы можете записаться
+          на бесплатное пробное занятие
+        </p>
+        <form action="" class="formInfo">
+          <input type="text" placeholder="Ваше имя" />
+          <input type="tel" placeholder="Ваш телефон" />
+          <button class="primary">Задать вопрос</button>
+          <label for=""><input type="checkbox" required />согласие на обработку данных </label>
+        
+        </form>
+      </div>
+      <img class="cloudTop" src="./img/cloudeTop.png" alt="">
+      <img class="girlWithhorse" src="./img/girlWithHorse.png" alt="">
+      <img class="ChristTree" src="./img/cristmasTree.png" alt="">
+      <img class="cloudButton" src="./img/cloudeButton.png" alt="">
+    </section>
+
+    <script src="./splide-4.1.3/splide-4.1.3/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Инициализация первого слайдера
+        var visitor1 = new Splide(".splide.visitor1", {
+          perPage: 5,
+          pagination: false,
+          arrows: false,
+          gap: "10px",
+        }).mount();
+
+        // Инициализация второго слайдера
+        var visitor2 = new Splide(".splide.visitor2", {
+          perPage: 5,
+          pagination: false,
+          arrows: false,
+          gap: "10px",
+        }).mount();
+
+        // Общие кнопки управления
+        var prevButton = document.getElementById("prevButton");
+        var nextButton = document.getElementById("nextButton");
+
+        // Добавляем события на кнопки
+        prevButton.addEventListener("click", function () {
+          visitor1.go("<"); // Переключение слайдера 1 назад
+          visitor2.go("<"); // Переключение слайдера 2 назад
+        });
+
+        nextButton.addEventListener("click", function () {
+          visitor1.go(">"); // Переключение слайдера 1 вперед
+          visitor2.go(">"); // Переключение слайдера 2 вперед
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var splide = new Splide(".splide.horse", {
+          perPage: 5,
+        });
+        splide.mount();
+      });
+    </script>
+    <script src="main.js"></script>
   </body>
 </html>

@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "Philosopher Regular";
+  src: url("./font/d52310b5e919ba7fb3941cd897ebaca0/fonts/philosopher_regular.eot"); /* IE 9 Compatibility Mode */
+  src: url("./font/d52310b5e919ba7fb3941cd897ebaca0/fonts/philosopher_regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE < 9 */
+      url("./font/d52310b5e919ba7fb3941cd897ebaca0/fonts/philosopher_regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./font/d52310b5e919ba7fb3941cd897ebaca0/fonts/philosopher_regular.woff")
+      format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("./font/d52310b5e919ba7fb3941cd897ebaca0/fonts/philosopher_regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./font/d52310b5e919ba7fb3941cd897ebaca0/fonts/philosopher_regular.svg#philosopher_regular")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -5,40 +24,75 @@
   list-style: none;
   text-decoration: none;
   font-family: "Roboto";
-  /* font-family: "TT Hoves", sans-serif; */
   color: #222222;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
-body {
-  max-width: 1920px; /* Ограничение ширины */
-  margin: 0 auto; /* Центрирование */
-}
 /*header start*/
 .bgHeader {
-  background-image: url(./img/background1.jpg);
-  width: 1921px;
-  height: 948px;
+  background-image: url(./img/background.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: relative;
+}
+.birdbg {
+  position: absolute;
+  width: 272px;
+  height: 86px;
+  top: 157px;
+  left: 1409px;
+}
+.horse1bg {
+  position: absolute;
+  width: 557px;
+  height: 671px;
+  top: 181px;
+  left: 973px;
+  gap: 0px;
+  opacity: 0px;
+}
+.cloudbg {
+  position: absolute;
+  width: 1920px;
+  height: 170px;
+  top: 688px;
+}
+.treerightbg {
+  position: absolute;
+  width: 167px;
+  height: 632px;
+  top: 241px;
+  left: 1753px;
+}
+.treeleftbg {
+  position: absolute;
+  width: 211px;
+  height: 435px;
+  top: 449px;
 }
 .headerMenu {
-  margin: 9px 375px 88px;
+  margin: 0px calc(22.3vw - 53.4px) /*375-18*/ calc(2.9vw + 31.6px) /*88-41*/;
   display: flex;
-  width: 1170px;
-  height: 60px;
+  width: calc(54vw + 126px); /*1170-300*/
+  height: calc(1.9vw + 22.8px); /*60-29*/
+  position: relative;
 }
+
 .logo {
-  width: 152px;
-  margin-right: 347px;
+  width: calc(3.9vw + 76.4px); /*152-89*/
+  margin-right: calc(16.7vw + 26.6px); /*347-80*/
 }
 .menu {
-  padding-top: 19px;
+  padding-top: calc(1.2vw - 3.8px); /*19-0*/
   display: flex;
   gap: 0 42px;
-  margin-right: 60px;
-  width: 428px;
+  margin-right: calc(1vw + 37.8px); /*57-41*/
+  width: calc(21.9vw + 6.8px); /*428-77*/
 }
 .menu h4 {
-  font-size: 13px;
+  font-size: 13px; /*13-11*/
   text-transform: uppercase;
   font-weight: 400;
   transition: all 0.3s ease;
@@ -49,60 +103,57 @@ body {
   text-underline-offset: 10px; /* Расстояние между текстом и линией */
 }
 .phoneNumber {
-  padding-top: 16px;
+  padding-top: calc(0.6vw + 14.2px); /*25-16*/
   display: flex;
-
-  width: 186px;
+  width: calc(4.8vw + 94.8px); /*186-110*/
 }
 .phoneNumberImg {
-  width: 16px;
-  margin-right: 10px;
+  width: calc(0.4vw + 8.8px); /*16-10*/
+  margin-right: calc(0.5vw + 0.4px); /*10-2*/
 }
 .phoneNumberInfo {
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   align-items: flex-start;
   gap: 8px 0;
 }
 .phoneNumberInfo p:nth-child(1) {
-  width: 161px;
-  font-size: 18px;
+  width: calc(3.9vw + 85.4px); /*161-98*/
+  font-size: calc(0.4vw + 9.6px); /*18-11*/
   line-height: 117%;
   font-weight: 700;
   margin: 0;
 }
 .phoneNumberInfo p:nth-child(2) {
-  width: 145px;
-  font-size: 13px;
+  width: calc(3.5vw + 91px); /*145-100*/
+  font-size: calc(0.3vw + 8.2px); /*13-9*/
   color: #7d808a;
   margin: 0;
 }
-
 .worldHorse {
-  margin-left: 376px;
-  margin-bottom: 449px;
+  margin-left: calc(20.6vw - 20px); /*376-45*/
 }
 .worldHorse h1 {
-  width: 613px;
-  font-family: "Philosopher"; /*скачать шрифт*/
-  font-size: 57px;
+  width: calc(18.3vw + 261px); /*613-320*/
+  font-family: "Philosopher Regular"; /*скачать шрифт*/
+  font-size: calc(2.1vw + 17.4px); /*57-24*/
   font-weight: 700;
   line-height: 107%;
 }
 .worldHorse p {
-  width: 506px; /*477 по макету*/
+  width: calc(12.6vw + 282.8px); /*477 по макету*/ /*506-320*/
   font-family: "Alegreya Sans"; /*скачать шрифт*/
-  font-size: 24px;
+  font-size: calc(0.7vw + 10.8px); /*24-13*/
   font-weight: 400;
   color: #646464;
   line-height: 140%;
   margin: 40px 90px 42px 46px;
 }
+
 .primary {
-  padding: 21px 75px;
-  width: 270px;
-  height: 70px;
+  /* padding: 21px 75px; */
+  width: calc(6.3vw + 150px); /*270-170*/
+  height: calc(1.7vw + 37.6px); /*70-43*/
   font-size: 15px;
   font-weight: 600;
   border: none;
@@ -116,7 +167,7 @@ body {
     #ffc107
   ); /* Градиентный фон */
   box-shadow: 0 4px 0 #b28d04; /* Тень кнопки */
-  margin-bottom: 449px;
+  margin-bottom: calc(10.2vw + 253.4px); /*449-286*/
 }
 /*header finish*/
 
@@ -124,7 +175,7 @@ h2 {
   font-size: 40px;
   line-height: 90%;
   font-weight: 400;
-  font-family: "Philosopher"; /*скачать шрифт*/
+  font-family: "Philosopher Regular"; /*скачать шрифт*/
   text-align: center;
 }
 
@@ -172,7 +223,7 @@ h2 {
   height: 67px;
   font-size: 42px;
   font-weight: 700;
-  font-family: "Philosopher";
+  font-family: "Philosopher Regular";
   color: #008139;
 }
 .cards p {
@@ -254,9 +305,31 @@ h5 {
   color: #7e7e7e;
 }
 
-/* Направления клуба */
+/* Направления клуба start*/
 .bgDirection {
   background-image: url(./img/background4section.png);
+  background-repeat: no-repeat;
+  position: relative;
+}
+.girlonHorse {
+  position: absolute;
+  width: 305px;
+  height: 530px;
+  top: 1027px;
+  left: 138px;
+}
+.boyonHorse {
+  position: absolute;
+  width: 372px;
+  height: 532px;
+  top: 1036px;
+  left: 1465px;
+}
+.clouds {
+  position: absolute;
+  width: 1920px;
+  height: 168px;
+  top: 1428px;
 }
 .directionTitle {
   margin-bottom: 75px;
@@ -265,7 +338,6 @@ h5 {
 .directionTitle h2 {
   margin-bottom: 25px;
 }
-
 .directionWrapper {
   display: flex;
   flex-wrap: wrap;
@@ -292,8 +364,10 @@ h5 {
   margin-top: 75px;
 }
 .directionCards img {
+  border-radius: 5px;
   position: relative;
   top: -25px;
+  margin-bottom: calc(0.4vw + 17.8px); /*25-19*/
 }
 .directionCards h3 {
   font-size: 23px;
@@ -319,21 +393,188 @@ h5 {
 .bgDirection button {
   margin: 50px 825px 421px;
 }
-.imgHorsedirection {
+
+/* Направления клуба finish*/
+
+/*Наши посетители start*/
+.visitorTitle {
+  margin-bottom: calc(2.2vw + 28px); /*70-35*/
+}
+.splide__list {
+  display: flex;
+  gap: 5px 5px;
+}
+.visitorCard {
+  display: flex;
+  gap: 5px 5px;
+  justify-content: space-between;
+}
+.visitorCard img {
+}
+
+.slider-buttons {
+  margin-top: 60px;
+  margin-left: 855px;
+}
+#prevButton,
+#nextButton {
+  width: 40px;
+  height: 40px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 50%;
+  color: #6a5300;
+  background: linear-gradient(
+    to bottom,
+    #fff9c4,
+    #ffc107
+  ); /* Градиентный фон */
+  box-shadow: 0 4px 0 #b28d04; /* Тень кнопки */
+  margin-bottom: 150px;
+}
+#nextButton img {
+  transform: rotate(180deg);
+}
+/*Наши посетители finish*/
+.ourHorseTitle {
+  margin-bottom: calc(2.2vw + 28px); /*70-35*/
+}
+.ourHorseCards {
+  width: calc(6.9vw + 238px); /*370-260*/
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px #eaeaea;
+  border-radius: 5px;
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-bottom: 240px; */
+  /* margin-bottom: calc(1.9vw + 24px); 60-30 */
+  overflow: visible;
+}
+.splide__track {
+  overflow: visible !important;
+}
+.ourHorseCards img {
+  width: calc(3.8vw + 248px); /*320-260*/
+  height: calc(1.9vw + 383.8px); /*421-390*/
+  border-radius: 5px;
   position: relative;
+  top: -25px;
 }
-.clouds {
-  position: absolute;
-  top: 318px;
-  right: 0;
+.ourHorseCards h4 {
+  font-size: calc(0.5vw + 13.4px); /*23-15*/
+  font-weight: 500;
+  line-height: 117%;
+  text-align: center;
 }
-.girlonHorse {
-  position: absolute;
-  left: 138px;
-  bottom: 109px;
+.ourHorseCards p {
+  font-family: Roboto;
+  font-size: calc(0.1vw + 12.6px); /*15-13*/
+  font-weight: 400;
+  line-height: 140%;
+  color: #7e7e7e;
+  text-align: center;
+  margin-bottom: calc(1.3vw + 21px); /*45-25*/
 }
-.boyonHorse {
+
+/* Отвечаем на вопросы */
+.BgSection7{
+  background-image: url(./img/bg7.png);
+background-repeat: no-repeat;
+width: 100%;
+height: 800px;
+background-size: cover;
+position: relative;
+/* overflow: visible !important; */
+}
+.cloudTop {
   position: absolute;
-  left: 1465px;
-  bottom: 109px;
+  width: 1920px;
+  height: 212px;
+  top: -2px;
+  left: 0px;
+}
+.cloudButton{
+  position: absolute;
+  width: 1920px;
+height: 194px;
+top: 608px;
+}
+.girlWithhorse{
+  position: absolute;
+  width: 1674px;
+  height: 644px;
+  top: 156px;
+  left: 99px;
+  
+}
+.ChristTree{
+  position: absolute;
+  width: 297px;
+  height: 371px;
+  top: 450px;
+  left: 1390px;
+}
+
+.QuestionForm {
+  width: 470px;
+  height: 547px;
+  margin: 140px 375px 113px 1075px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 10px #eaeaea;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.QuestionForm h2 {
+  width: 339px;
+  margin: 60px 65px 15px 65px;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 100%;
+}
+.QuestionForm p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 140%;
+  text-align: center;
+  color: #7e7e7e;
+  width: 370px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+.formInfo button {
+  width: 330px;
+  margin: 0 0 30px 70px;
+}
+.formInfo{
+
+}
+.formInfo input {
+  width: 330px;
+  height: 61px;
+  margin-left: 70px;
+  margin-bottom: 20px;
+  padding-left: 21px;
+  border-radius: 5px;
+  border: 1px solid #8F8F8F;
+}
+.formInfo input:last-child{
+  border: 2px solid #FFC700;
+  width: 20px;
+  display: inline;
+}
+
+.formInfo label{
+  font-family: Roboto;
+font-size: 15px;
+font-weight: 400;
+line-height: 17.58px;
+color: #8A8A8A;
+display: block;
+
 }

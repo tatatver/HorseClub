@@ -1,0 +1,38 @@
+.visitorCard {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+     gap: 5px; /* Отступ между элементами */
+  }
+  
+  .visitorCard img {
+    display: block;
+    max-width: auto; /* Адаптивная ширина */
+    height: auto; /* Сохраняем пропорции */
+  }
+  
+  .visitorCard img.top {
+    width: 100%; /* Верхнее изображение занимает всю ширину карточки */
+  }
+  
+  .visitorCard img.bottom {
+    width: auto; /* Нижнее изображение остается узким */
+    max-width: 60%; /* Уменьшаем ширину для нижнего изображения */
+  }
+
+
+  /*как на макете, но не работает слайдер*/
+  .visitorTitle {
+    margin-bottom: calc(2.2vw + 28px); /*70-35*/
+  }
+  .splide__list{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap;  */
+    gap: 5px 5px;
+  }
+  
+  .visitorCard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
