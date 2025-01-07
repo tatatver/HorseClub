@@ -481,14 +481,14 @@ h5 {
 }
 
 /* Отвечаем на вопросы */
-.BgSection7{
+.BgSection7 {
   background-image: url(./img/bg7.png);
-background-repeat: no-repeat;
-width: 100%;
-height: 800px;
-background-size: cover;
-position: relative;
-/* overflow: visible !important; */
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+  background-size: cover;
+  position: relative;
+  /* overflow: visible !important; */
 }
 .cloudTop {
   position: absolute;
@@ -497,21 +497,20 @@ position: relative;
   top: -2px;
   left: 0px;
 }
-.cloudButton{
+.cloudButton {
   position: absolute;
   width: 1920px;
-height: 194px;
-top: 608px;
+  height: 194px;
+  top: 608px;
 }
-.girlWithhorse{
+.girlWithhorse {
   position: absolute;
   width: 1674px;
   height: 644px;
   top: 156px;
   left: 99px;
-  
 }
-.ChristTree{
+.ChristTree {
   position: absolute;
   width: 297px;
   height: 371px;
@@ -551,8 +550,7 @@ top: 608px;
   width: 330px;
   margin: 0 0 30px 70px;
 }
-.formInfo{
-
+.formInfo {
 }
 .formInfo input {
   width: 330px;
@@ -561,20 +559,128 @@ top: 608px;
   margin-bottom: 20px;
   padding-left: 21px;
   border-radius: 5px;
-  border: 1px solid #8F8F8F;
+  border: 1px solid #8f8f8f;
 }
-.formInfo input:last-child{
-  border: 2px solid #FFC700;
+.formInfo input:last-child {
+  border: 2px solid #ffc700;
   width: 20px;
   display: inline;
 }
 
-.formInfo label{
+.formInfo label {
   font-family: Roboto;
-font-size: 15px;
-font-weight: 400;
-line-height: 17.58px;
-color: #8A8A8A;
-display: block;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 17.58px;
+  color: #8a8a8a;
+  display: block;
+}
+/* Отвечаем на вопросы finish*/
 
+/*О нас говорят клиенты*/
+.feedback {
+  margin-bottom: calc(5vw + 54px);
+}
+.feedBackTitle {
+  width: calc(13.1vw + 177px); /*410-216*/
+  font-size: calc(1.2vw + 17.2px); /*40-21*/
+  font-weight: 400;
+  margin: calc(4.4vw + 56px) 0 30px calc(44vw - 88.6px);
+}
+.feedbackCard {
+  width: calc(16.9vw + 246px); /*570-300*/
+  height: calc(1.8vw + 257px); /*291-263*/
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 10px #eaeaea;
+  border-radius: 5px;
+  padding: calc(1.3vw + 16px) /*40-20*/ calc(1.9vw + 9px) /*45-15*/;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: calc(1.9vw + 24px); /*60-30*/
+}
+.feedbackdetail p {
+  width: calc(13.1vw + 228px); /*480-270*/
+  font-size: calc(0.1vw + 12.6px); /*15-13*/
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: calc(0.3vw + 9px); /*15-10*/
+  color: #363434;
+}
+.feedbackButton {
+  /* margin: 0 160px 45px 165px; */
+}
+.feedbackButton button {
+  width: calc(1.3vw + 126px); /*150-130*/
+  height: 35px;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 4px 10px #eaeaea;
+  border-radius: 5px;
+  padding: calc(-0.1vw + 9.4px) /*7-9*/ calc(-0.2vw + 21.8px) /*17-21*/
+    calc(-0.1vw + 9.4px) /*7-9*/ calc(0.6vw + 19px) /*31-21*/;
+  font-size: calc(0.1vw + 12.6px); /*15-13*/
+  font-weight: 400;
+  line-height: 140%;
+  color: #008139;
+  margin-left: calc(5.6vw + 62px); /*170-80*/
+  margin-bottom: calc(1.3vw + 19.8px); /*45-24*/
+}
+.feedbackButton img {
+  width: 12px;
+  height: 5px;
+  display: inline;
+  margin-bottom: 7px;
+  margin-left: calc(0.2vw + 2.4px); /*6-3*/
+}
+.feedBackUser {
+  width: calc(1.8vw + 181px); /*216-187*/
+  height: 49px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0 calc(0.6vw + 8px) /*20-10*/;
+}
+.feedBackUser img {
+  width: 45px;
+  height: 45px;
+}
+.feedbackName {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 10px;
+}
+.feedbackName h4 {
+  width: calc(2.5vw + 135px); /*152-132*/
+  font-size: calc(0.1vw + 14.8px); /*16-14*/
+  font-weight: 400;
+}
+.feedbackName img {
+  width: 18px;
+  height: 18px;
+  color: #101820;
+}
+.quote {
+  position: absolute;
+  width: calc(0.9vw + 27px); /*45-30*/
+  height: calc(0.8vw + 22.6px); /*37-25*/
+  top: 219px;
+  left: calc(14.4vw + 204px); /*480-250*/
+}
+
+/* карта */
+.map-container {
+  width: 1920px;
+  height: 650px;
+}
+.contactForm {
+  width: calc(13.8vw + 255.8px); /*521-300*/
+  height: calc(9.5vw +328.6px); /*511-359*/
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 10px #eaeaea;
+  border-radius: 5px;
+  background: #ffffff;
+  padding: calc(1vw+ 26px) /*50-30*/ calc(1.8vw + 37.2px) /*72-43*/
+    calc(2.5vw + 22px) /*70-30*/ calc(0.4vw + 61.6px) /*70-63*/;
+  margin: calc(-15.6vw + 368.8px) /*70-319*/ calc(63.4vw - 192.8px) /*1024-10*/
+    0 /*69- -168*/ calc(22.8vw - 63px) /*375-10*/;
 }
