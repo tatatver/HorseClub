@@ -30,47 +30,67 @@
 
 /*header start*/
 .bgHeader {
-  background-image: url(./img/background.jpg);
+  background-image: url(./img/1bg.png);
+  background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
-  background-size: cover;
+  height: calc(24.3vw + 482.4px); /*948-560*/
   position: relative;
 }
 .birdbg {
   position: absolute;
-  width: 272px;
-  height: 86px;
-  top: 157px;
-  left: 1409px;
+  width: calc(12.3vw + 35.6px); /*272-75*/
+  height: calc(3.9vw + 11.6px); /*86-24*/
+  top: calc(4.1vw + 77.8px); /*157-91*/
+  left: calc(81.1vw - 147.4px); /*1409-112*/
 }
 .horse1bg {
   position: absolute;
-  width: 557px;
-  height: 671px;
-  top: 181px;
-  left: 973px;
-  gap: 0px;
-  opacity: 0px;
+  width: calc(23.1vw + 113px); /*557-187*/
+  height: calc(30.2vw + 31.4px); /*671-188*/
+  top: calc(-10.8vw + 388.6px); /*181-354*/
+  left: calc(54.6vw - 75.8px); /*973-99*/
 }
 .cloudbg {
   position: absolute;
-  width: 1920px;
-  height: 170px;
-  top: 688px;
+  width: calc(90vw + 192px); /*1920-480*/
+  height: calc(7.4vw + 27.2px); /*170-51*/
+  top: calc(11.3vw + 472px); /*688-508*/
+
 }
 .treerightbg {
   position: absolute;
-  width: 167px;
-  height: 632px;
-  top: 241px;
-  left: 1753px;
+  width: calc(8.3vw + 7.4px); /*167-34*/
+  height: calc(31.3vw + 30.8px); /*632-131*/
+  top: calc(-11.2vw + 455.8px); /*241-420*/
+  left: calc(91.7vw - 7.4px); /*1753-286*/
 }
 .treeleftbg {
   position: absolute;
-  width: 211px;
-  height: 435px;
-  top: 449px;
+  width: calc(10.4vw + 10.6px); /*211-44*/
+  height: calc(21.4vw + 24.6px); /*435-93*/
+  top: calc(-0.5vw + 458.6px); /*449-457*/
+}
+.tree {
+  position: absolute;
+  width: calc(15.2vw + 97.4px); /*389-146*/
+  height: calc(11.3vw + 72px); /*288-108*/
+  top: calc(4vw + 377.2px); /*454-390 */
+  left: calc(6.3vw - 122.2px); /*-1 - -102*/
+}
+.ambar {
+  position: absolute;
+  width: calc(15.5vw + 130.4px); /*428-180*/
+  height: calc(6.9vw + 58.8px); /*192-81*/
+  top: calc(10.4vw + 396.8px); /*596-430*/
+  left: calc(23.6vw - 115.4px); /*337- -40*/
+}
+.horseSmall {
+  position: absolute;
+  width: calc(8.3vw + 53px); /*213-93 -480*/
+  height: calc(8.3vw + 50.3px); /*209-90 -480*/
+  top: calc(9.5vw + 374px); /*557-420 -480*/
+  left: calc(37.2vw + 5.667px); /*719-184 -480*/
 }
 .headerMenu {
   margin: 0px calc(22.3vw - 53.4px) /*375-18*/ calc(2.9vw + 31.6px) /*88-41*/;
@@ -79,6 +99,11 @@
   height: calc(1.9vw + 22.8px); /*60-29*/
   position: relative;
 }
+@media (max-width:450px){
+  .horseSmall{
+    display: none;
+  }
+  }
 
 .logo {
   width: calc(3.9vw + 76.4px); /*152-89*/
@@ -668,19 +693,259 @@ h5 {
 }
 
 /* карта */
+.mapForm {
+  background-image: url(./img/bgmap.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: calc(8.8vw + 482px); /*650-510*/
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
 .map-container {
-  width: 1920px;
-  height: 650px;
+  width: 100%;
+  height: calc(8.8vw + 482px);
 }
 .contactForm {
+  position: absolute;
+  top: calc(1.7vw + 36.7px);
+
+  left: calc(22.8vw - 63px); /*375-10*/
   width: calc(13.8vw + 255.8px); /*521-300*/
-  height: calc(9.5vw +328.6px); /*511-359*/
+  height: calc(9.5vw + 328.6px); /*511-359*/
   border: 1px solid #eaeaea;
   box-shadow: 0 4px 10px #eaeaea;
   border-radius: 5px;
   background: #ffffff;
-  padding: calc(1vw+ 26px) /*50-30*/ calc(1.8vw + 37.2px) /*72-43*/
-    calc(2.5vw + 22px) /*70-30*/ calc(0.4vw + 61.6px) /*70-63*/;
-  margin: calc(-15.6vw + 368.8px) /*70-319*/ calc(63.4vw - 192.8px) /*1024-10*/
-    0 /*69- -168*/ calc(22.8vw - 63px) /*375-10*/;
+}
+.directionborderContact {
+  height: 1px;
+  width: 26px;
+  background-color: #008139;
+  margin-left: calc(-4.2vw + 150px); /*70-137*/
+  margin-bottom: calc(1.4vw + 15.6px); /*42-20*/
+}
+.contactForm h2 {
+  width: calc(4.3vw + 91.2px); /*174-105*/
+  margin-top: calc(1vw + 26px); /*50-30*/
+  margin-left: calc(-1.7vw + 103.6px); /*70-98*/
+  margin-bottom: calc(0.6vw + 18px); /*30-20*/
+  font-size: calc(1vw + 20.8px); /*40-24*/
+}
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0 22px;
+  margin-left: 75px;
+  margin-top: 42px;
+}
+.contactInfo {
+  display: flex;
+}
+.Finishpin {
+  width: calc(0.2vw + 10.4px); /*14-11*/
+  height: calc(0.3vw + 16.2px); /*21-17*/
+  margin-right: calc(0.6vw + 10px); /*22-12*/
+  margin-bottom: calc(0.3vw + 20px); /*26-21*/
+}
+.Finishphone {
+  width: calc(0.4vw + 11.8px); /*19-13*/
+  height: calc(0.4vw + 11.8px); /*19-13*/
+  margin-right: calc(0.6vw + 9.2px); /*20-11*/
+  margin-bottom: calc(0.4vw + 21.8px); /*29-23*/
+}
+.Finishemail {
+  width: calc(0.4vw + 13.6px); /*22-15*/
+  height: calc(0.3vw + 10px); /*16-11*/
+  margin-right: calc(0.5vw + 8.4px); /*18-10*/
+  margin-bottom: calc(0.5vw + 19.4px); /*29-21*/
+}
+.Finishocloc {
+  width: calc(0.4vw + 12.8px); /*20-14*/
+  height: calc(0.4vw + 12.8px); /*20-14*/
+  margin-right: calc(0.6vw + 8.2px); /*19-10*/
+}
+.contactCard p {
+  font-size: calc(0.3vw + 12px); /*18-13*/
+  font-weight: 400;
+  line-height: 155%;
+}
+.socialLogo {
+  display: flex;
+  gap: 0 13px;
+  margin-left: calc(13.5vw + 22.8px); /*282-66*/
+  margin-top: 30px;
+}
+.socialLogo img {
+  width: 32px;
+}
+.Contacttreeleft {
+  position: absolute;
+  top: 362px;
+  right: 1459px;
+}
+.Contacttreeright {
+  position: absolute;
+  top: 118px;
+  left: 1725px;
+}
+.Pin {
+  position: absolute;
+  width: calc(0.8vw + 48.8px); /*63-51*/
+  height: calc(1.1vw 70.4px); /*92-74*/
+  top: calc(12vw + 77.8px); /*307-116*/
+  right: calc(32.1vw + 31.2px); /*648-134*/
+}
+
+/*footer start*/
+footer {
+  background: #0b0b0b;
+  height: calc(-25.2vw + 621px); /*138-541*/
+}
+.footerMenu {
+  margin: 0 calc(30.8vw - 216.7px) /*375-20 +768*/ calc(0.4vw + 16.6px)
+    /*25-18*/;
+  padding-top: 25px;
+  display: flex;
+  width: calc(19.2vw + 820px);
+}
+.footerlogo {
+  width: calc(5.1vw + 60.7px);
+  margin-right: calc(31.2vw - 180px);
+}
+.menuTitle {
+  padding-top: calc(1.2vw - 3.8px); /*19-0*/
+  display: flex;
+  gap: 0 42px;
+  margin-right: calc(1vw + 37.8px); /*57-41*/
+  width: calc(21.9vw + 6.8px); /*428-77*/
+}
+.menuTitle h4 {
+  color: #eaeaea;
+  font-weight: 400;
+}
+.footerMenu button {
+  width: calc(3vw + 144px);
+  height: 46px;
+  text-align: center;
+  font-size: 14.5px;
+  font-weight: 400;
+  color: #f5f5f5;
+  background: #000;
+  border: 1px solid #fde724;
+  border-radius: 5px;
+}
+.accept {
+  width: calc(22.9vw + 144px); /*544-209*/
+  display: flex;
+  gap: 0 40px;
+  margin-left: calc(19.9vw - 5.6px); /*376-58*/
+}
+.accept p {
+  font-size: calc(0.3vw + 8.2px); /*13-9*/
+  color: #7d808a;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+  .Contacttreeleft {
+    display: none;
+  }
+  .Contacttreeright {
+    display: none;
+  }
+}
+
+@media (max-width: 765px) {
+  .primary.desc {
+    display: none;
+  }
+  .primary.mob {
+    display: block;
+  }
+  .contactForm {
+    top: calc(-15.6vw + 368.8px); /*70-319*/
+  }
+  .mapForm {
+    margin-bottom: calc(23.8vw + 162px);
+    overflow: visible;
+  }
+  .footerMenu {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "menuTitle"
+      "button"
+      "logo";
+    grid-row-gap: 40px;
+    text-align: center;
+  }
+  .menuTitle {
+    grid-area: menuTitle;
+    margin-top: 40px;
+    margin-left: 92px;
+    width: 443px;
+  }
+  .footerMenu button {
+    grid-area: button;
+    margin-left: 222px;
+    width: 167px;
+  }
+  .footerlogo {
+    grid-area: logo;
+    margin-left: 230px;
+  }
+  .accept {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .primary.desc {
+    display: none;
+  }
+  .primary.mob {
+    display: block;
+  }
+  .footerMenu {
+    display: grid;
+    grid-template-rows: 165px 60px 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "menuTitle"
+      "button"
+      "logo";
+    grid-row-gap: 35px;
+    text-align: center;
+  }
+  .menuTitle {
+    grid-area: menuTitle;
+    margin-top: 30px;
+    margin-left: 225px;
+    width: 108px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .footerMenu button {
+    grid-area: button;
+    margin-left: 195px;
+    width: 167px;
+  }
+  .footerlogo {
+    grid-area: logo;
+    margin-left: 203px;
+  }
+  .accept {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    /* font-size: 9px; */
+  }
 }
