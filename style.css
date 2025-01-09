@@ -184,7 +184,7 @@ text-align: center;
   display: flex;
   gap: 0 42px;
   margin-right: calc(1.4vw + 30.33px); /*57-41*/
-  width: calc(7.2vw + 289.7px); /*428-345*/
+  width:100%;
 }
 .menu h4 {
   font-size: calc(0.2vw + 9.667px); /*13-11*/
