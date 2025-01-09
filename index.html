@@ -17,15 +17,26 @@
   <body>
     <!-- Окунитесь в мир 
 лошадей вместе с нами -->
-    <section class="bgHeader">
+    <section class="bgHeader open">
       <div class="headerMenu">
         <div class="logo"><img src="./img/logo.png" alt="" /></div>
+        <div class="burger" id="burger">
+          <span></span><span></span><span></span>
+          <p>Меню</p>
+        </div>
+        <nav id="burgermenu" class="burgermenu">
+          <ul>
+              <li><a href="#aboutUs"> <h4>О нас</h4></a></li>
+              <li><a href="#direction"> <h4>Услуги и цены</h4></a></li>
+              <li><a href="#visitor"><h4>Фотоальбом</h4></a></li>
+              <li><a href="#contact"> <h4>Контакты</h4></a></li>
+          </ul>
+      </nav>
         <div class="menu">
           <a href="#aboutUs"> <h4>О нас</h4></a>
           <a href="#direction"> <h4>Услуги и цены</h4></a>
           <a href="#visitor"><h4>Фотоальбом</h4></a>
           <a href="#contact"> <h4>Контакты</h4></a>
-         
         </div>
         <div class="phoneNumber">
           <div class="phoneNumberImg"><img src="./img/tel.svg" alt="" /></div>
@@ -390,7 +401,8 @@
           <input type="text" placeholder="Ваше имя" />
           <input type="tel" placeholder="Ваш телефон" />
           <button class="primary">Задать вопрос</button>
-          <label for=""><input type="checkbox" required />согласие на обработку данных
+          <label for=""
+            ><input type="checkbox" required />согласие на обработку данных
           </label>
         </form>
       </div>
@@ -569,7 +581,6 @@
           <a href="#direction"> <h4>Услуги и цены</h4></a>
           <a href="#visitor"><h4>Фотоальбом</h4></a>
           <a href="#contact"><h4>Контакты</h4></a>
-          
         </div>
         <button>Заказать звонок</button>
       </div>
@@ -590,6 +601,17 @@
           pagination: false,
           arrows: false,
           gap: "10px",
+          breakpoints: {
+      1000: {
+        perPage: 4,
+      },
+      480: {
+        perPage: 3,
+      },
+      320: {
+        perPage: 2,
+      },
+    },
         }).mount();
 
         // Инициализация второго слайдера
@@ -598,6 +620,17 @@
           pagination: false,
           arrows: false,
           gap: "10px",
+          breakpoints: {
+      1000: {
+        perPage: 4,
+      },
+      480: {
+        perPage: 3,
+      },
+      320: {
+        perPage: 2,
+      },
+    },
         }).mount();
 
         // Общие кнопки управления
@@ -623,6 +656,17 @@
           perMove: 1,
           focus: "center",
           pagination: true,
+          breakpoints: {
+      1300: {
+        perPage: 3,
+      },
+      750: {
+        perPage: 2,
+      },
+      525: {
+        perPage: 1,
+      },
+    },
         });
         splide.mount();
       });
@@ -633,15 +677,14 @@
           perPage: 3,
           gap: "30px",
           breakpoints: {
-            768: {
-              perPage: 2,
-            },
-          },
-          breakpoints: {
-            470: {
-              perPage: 1,
-            },
-          },
+      1400: {
+        perPage: 2,
+      },
+      680: {
+        perPage: 1,
+      },
+      
+    },
         });
         splide.mount();
       });

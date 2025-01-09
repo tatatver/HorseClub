@@ -56,7 +56,6 @@
   width: calc(90vw + 192px); /*1920-480*/
   height: calc(7.4vw + 27.2px); /*170-51*/
   top: calc(11.3vw + 472px); /*688-508*/
-
 }
 .treerightbg {
   position: absolute;
@@ -92,38 +91,109 @@
   top: calc(9.5vw + 374px); /*557-420 -480*/
   left: calc(37.2vw + 5.667px); /*719-184 -480*/
 }
+
+.burger{
+  width: 77px;
+  height: 29px;
+  border: 1px solid #008139;
+  border-radius: 3px;
+ position: relative;
+ margin-top: 15px;
+ margin-left: 24px;
+z-index: 1;
+transition: transform .5s;
+z-index: 2;
+}
+
+
+.burger span{
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #008139;
+  left: 10px;
+  top: 10px;
+  margin-right: 5px;
+  transition: transform .5s, opacity .5s, background-color .5s;
+}
+.burger span:nth-child(2){
+  transform: translateY(4px);
+}
+.burger span:nth-child(3){
+  transform: translateY(8px);
+}
+.burger p{
+  font-size: 15px;
+  margin: 6px 10px 8px 25px;
+}
+
+
+.burgermenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 600px;
+  background-color: #0D0D0D;
+  z-index: 0;
+  justify-content: center;
+padding-top: 50px;
+border-right: 5px solid #008139;
+
+}
+.burgermenu h4{
+  color: #FFFFFF;
+font-size: 15px;
+font-weight: 400;
+text-transform: uppercase;
+
+}
+.burgermenu h4:hover {
+  font-size: calc(0.2vw + 9.667px);
+  text-decoration: underline #fff;
+  text-underline-offset: 10px; /* Расстояние между текстом и линией */
+}
+
+.burgermenu ul {
+width: 120px;
+height: 200px;
+text-align: center;
+}
+
+.burgermenu li {
+  margin: 20px 0;
+}
+
+
 .headerMenu {
-  margin: 0px calc(22.3vw - 53.4px) /*375-18*/ calc(2.9vw + 31.6px) /*88-41*/;
+  margin: 0px calc(32.6vw - 250px) calc(4.1vw + 9.66px) calc(31.8vw - 234px);
   display: flex;
-  width: calc(54vw + 126px); /*1170-300*/
-  height: calc(1.9vw + 22.8px); /*60-29*/
+  width: calc(38.5vw + 455px);
+  height: 60px;
   position: relative;
 }
-@media (max-width:450px){
-  .horseSmall{
-    display: none;
-  }
-  }
 
 .logo {
-  width: calc(3.9vw + 76.4px); /*152-89*/
-  margin-right: calc(16.7vw + 26.6px); /*347-80*/
+  width: calc(2.6vw + 100px);
+  height: calc(1.8vw + 25px);
+  margin-right: calc(23.2vw - 98px); /*347-80*/
 }
 .menu {
   padding-top: calc(1.2vw - 3.8px); /*19-0*/
   display: flex;
   gap: 0 42px;
-  margin-right: calc(1vw + 37.8px); /*57-41*/
-  width: calc(21.9vw + 6.8px); /*428-77*/
+  margin-right: calc(1.4vw + 30.33px); /*57-41*/
+  width: calc(7.2vw + 289.7px); /*428-345*/
 }
 .menu h4 {
-  font-size: 13px; /*13-11*/
+  font-size: calc(0.2vw + 9.667px); /*13-11*/
   text-transform: uppercase;
   font-weight: 400;
   transition: all 0.3s ease;
 }
 .menu h4:hover {
-  font-size: 13px;
+  font-size: calc(0.2vw + 9.667px);
   text-decoration: underline #008139;
   text-underline-offset: 10px; /* Расстояние между текстом и линией */
 }
@@ -143,20 +213,20 @@
   gap: 8px 0;
 }
 .phoneNumberInfo p:nth-child(1) {
-  width: calc(3.9vw + 85.4px); /*161-98*/
-  font-size: calc(0.4vw + 9.6px); /*18-11*/
+  width: calc(3.2vw + 99.3px);
+  font-size: calc(0.3vw + 11.3px);
   line-height: 117%;
   font-weight: 700;
   margin: 0;
 }
 .phoneNumberInfo p:nth-child(2) {
-  width: calc(3.5vw + 91px); /*145-100*/
-  font-size: calc(0.3vw + 8.2px); /*13-9*/
+  width: calc(2.9vw + 108.3px);
+  font-size: calc(0.2vw + 9.6px);
   color: #7d808a;
   margin: 0;
 }
 .worldHorse {
-  margin-left: calc(20.6vw - 20px); /*376-45*/
+  margin-left: calc(31.8vw - 234px); /* calc(23.5vw - 75px); 376-45*/
 }
 .worldHorse h1 {
   width: calc(18.3vw + 261px); /*613-320*/
@@ -165,6 +235,8 @@
   font-weight: 700;
   line-height: 107%;
 }
+
+
 .worldHorse p {
   width: calc(12.6vw + 282.8px); /*477 по макету*/ /*506-320*/
   font-family: "Alegreya Sans"; /*скачать шрифт*/
@@ -206,7 +278,7 @@ h2 {
 
 /*О нашем клубе start*/
 .aboutUsTitle {
-  width: calc(7.9vw + 116.6px); /*267-141*/ 
+  width: calc(8.9vw + 116.6px); /*267-141*/
   margin: 0 calc(46.1vw - 58.4px) calc(2.2vw + 28px); /*826-89*/ /*70-35*/
 }
 .aboutUsWrapper {
@@ -430,13 +502,13 @@ h5 {
   gap: 10px;
   justify-content: center;
   /* flex-wrap: wrap; */
-  /* width: 100%; Или фиксированное значение, например 1200px */
-  /*overflow: hidden;  Скрывает все, что выходит за пределы контейнера 
+/* width: 100%; Или фиксированное значение, например 1200px */
+/*overflow: hidden;  Скрывает все, что выходит за пределы контейнера 
 } */
 .visitorCard img {
   border-radius: 8px;
   width: 100%;
-  height: 300px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -545,10 +617,9 @@ h5 {
   justify-content: center;
   gap: 15px;
   position: relative;
-
 }
-.splide__pagination__page.is-active{
-  background: #FFC700;
+.splide__pagination__page.is-active {
+  background: #ffc700;
 }
 .splide__arrows {
   display: flex;
@@ -559,10 +630,10 @@ h5 {
   transform: translateY(-50%);
   z-index: 10;
   position: absolute;
-  background: #FFC700;
+  background: #ffc700;
 }
 .splide__arrow--prev,
-.splide__arrow--next{
+.splide__arrow--next {
   width: 40px;
   height: 40px;
   border: none;
@@ -577,7 +648,7 @@ h5 {
   cursor: pointer;
   transition: transform 0.2s;
 }
-.splide__arrow--next img{
+.splide__arrow--next img {
   transform: rotate(180deg);
 }
 
@@ -590,7 +661,7 @@ h5 {
   background-size: cover;
   position: relative;
   margin-top: calc(4.4vw + 56px); /*140-70*/
-  overflow: hidden; 
+  overflow: hidden;
 }
 .cloudTop {
   position: absolute;
@@ -602,7 +673,7 @@ h5 {
 .cloudButton {
   position: absolute;
   width: calc(96.9vw + 60px); /*1920-370*/
-  height:calc(9vw + 21.2px); /*194-50*/
+  height: calc(9vw + 21.2px); /*194-50*/
   top: calc(-9.7vw + 794px); /*608-763*/
 }
 .girlWithhorse {
@@ -650,10 +721,10 @@ h5 {
   color: #7e7e7e;
   width: calc(5.8vw + 259.6px); /*370-278*/
   margin-left: calc(2.4vw + 3.2px); /*50-11*/
-  margin-bottom:  calc(0.6vw + 18px); /*30-20*/
+  margin-bottom: calc(0.6vw + 18px); /*30-20*/
 }
-span{
-  color: #7E7E7E;
+span {
+  color: #7e7e7e;
   font-weight: 700;
 }
 .formInfo button {
@@ -932,7 +1003,14 @@ footer {
   font-weight: 400;
   text-decoration: underline;
 }
-
+@media (max-width: 1920px) {
+  .burger{
+    display: none;
+  }
+  .burgermenu{
+    display: none;
+  }
+}
 @media (max-width: 1000px) {
   .Contacttreeleft {
     display: none;
@@ -940,7 +1018,7 @@ footer {
   .Contacttreeright {
     display: none;
   }
-  .ChristTree{
+  .ChristTree {
     display: none;
   }
 }
@@ -991,9 +1069,58 @@ footer {
     gap: 10px;
     justify-content: center;
   }
+  .menu{
+    display: none;
+  }
+  
+  .burger{
+    display: block;
+ 
+  }
+  .burgermenu.open {
+    display: flex;
+    width: 230px;
+    height: 600px;
+    z-index: 1;
+    margin-left: 0;
 }
 
-@media (max-width: 350px) {
+  .headerMenu{
+    width: calc(1vw - 20px);
+    margin-left: 10px;
+    }
+  .logo{
+    width: calc(6.9vw + 66.875px);
+    height: calc(2.2vw + 21.87px);
+    margin: 15px 24px 0 10px;
+  }
+.phoneNumber{
+  width: calc(11.1vw + 56.6px); /*142-110*/
+  margin-right: 10px;
+  margin-left: calc(56.6vw - 111.6px);
+}
+.phoneNumberInfo p{
+  font-size: calc(1vw + 6px);
+
+}
+}
+@media (max-width: 480px) {
+  .worldHorse h1 {
+    text-align: center;
+  }
+ 
+  
+  
+}
+@media (max-width: 450px) {
+  .horseSmall {
+    display: none;
+  }
+  .phoneNumber{
+    display: none;
+  }
+}
+@media (max-width: 445px) {
   .primary.desc {
     display: none;
   }
