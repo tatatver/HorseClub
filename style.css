@@ -197,7 +197,7 @@
 /*header finish*/
 
 h2 {
-  font-size: 40px;
+  font-size: calc(1.2vw + 17.2px); /*40-24*/
   line-height: 90%;
   font-weight: 400;
   font-family: "Philosopher Regular"; /*скачать шрифт*/
@@ -206,13 +206,13 @@ h2 {
 
 /*О нашем клубе start*/
 .aboutUsTitle {
-  width: 268px;
-  margin: 0 826px 89px;
+  width: calc(7.9vw + 116.6px); /*267-141*/ 
+  margin: 0 calc(46.1vw - 58.4px) calc(2.2vw + 28px); /*826-89*/ /*70-35*/
 }
 .aboutUsWrapper {
   display: flex;
   align-items: center;
-  margin: 0 337px 185px 145px;
+  margin: 0 337px 185px 145px; /*337-10*/
 }
 .aboutImg {
   flex-basis: 870px;
@@ -425,30 +425,37 @@ h5 {
 .visitorTitle {
   margin-bottom: calc(2.2vw + 28px); /*70-35*/
 }
-.splide__list {
+/* .visitorGrid {
   display: flex;
-  gap: 5px 5px;
-}
-.visitorCard {
-  display: flex;
-  gap: 5px 5px;
-  justify-content: space-between;
-}
+  gap: 10px;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  /* width: 100%; Или фиксированное значение, например 1200px */
+  /*overflow: hidden;  Скрывает все, что выходит за пределы контейнера 
+} */
 .visitorCard img {
+  border-radius: 8px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 .slider-buttons {
-  margin-top: 60px;
-  margin-left: 855px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  /* margin-top: 60px;
+  margin-left: 855px; */
 }
 #prevButton,
 #nextButton {
   width: 40px;
   height: 40px;
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   align-items: center;
-  border: 0;
+  border: none;
   border-radius: 50%;
   color: #6a5300;
   background: linear-gradient(
@@ -457,13 +464,20 @@ h5 {
     #ffc107
   ); /* Градиентный фон */
   box-shadow: 0 4px 0 #b28d04; /* Тень кнопки */
-  margin-bottom: 150px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  /* margin-bottom: 150px; */
+}
+#prevButton:hover,
+#nextButton:hover {
+  transform: scale(1.1);
 }
 #nextButton img {
   transform: rotate(180deg);
 }
 /*Наши посетители finish*/
 .ourHorseTitle {
+  margin-top: 150px;
   margin-bottom: calc(2.2vw + 28px); /*70-35*/
 }
 .ourHorseCards {
@@ -476,12 +490,12 @@ h5 {
   flex-direction: column;
   align-items: center;
   /* margin-bottom: 240px; */
-  /* margin-bottom: calc(1.9vw + 24px); 60-30 */
-  overflow: visible;
-}
-.splide__track {
+  margin-bottom: calc(1.9vw + 24px); /*60-30*/
   overflow: visible !important;
 }
+/* .horse{
+  overflow: visible !important;
+} */
 .ourHorseCards img {
   width: calc(3.8vw + 248px); /*320-260*/
   height: calc(1.9vw + 383.8px); /*421-390*/
@@ -505,6 +519,68 @@ h5 {
   margin-bottom: calc(1.3vw + 21px); /*45-25*/
 }
 
+/* 
+.splide__pagination__page {
+  background-color: #cb2020;
+  border: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.splide__pagination__page.is-active {
+  background: #FFC700;
+  transform: scale(1.4);
+
+} */
+/* .splide__slide.is-prev,
+.splide__slide.is-next {
+  bottom: 40px;
+  opacity: 0.6; /* Прозрачность 
+  filter: blur(2px); /* Размытие 
+} */
+.splide__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+
+}
+.splide__pagination__page.is-active{
+  background: #FFC700;
+}
+.splide__arrows {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  position: absolute;
+  background: #FFC700;
+}
+.splide__arrow--prev,
+.splide__arrow--next{
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  color: #6a5300;
+  background: linear-gradient(
+    to bottom,
+    #fff9c4,
+    #ffc107
+  ); /* Градиентный фон */
+  box-shadow: 0 4px 0 #b28d04; /* Тень кнопки */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.splide__arrow--next img{
+  transform: rotate(180deg);
+}
+
 /* Отвечаем на вопросы */
 .BgSection7 {
   background-image: url(./img/bg7.png);
@@ -513,76 +589,85 @@ h5 {
   height: 800px;
   background-size: cover;
   position: relative;
-  /* overflow: visible !important; */
+  margin-top: calc(4.4vw + 56px); /*140-70*/
+  overflow: hidden; 
 }
 .cloudTop {
   position: absolute;
-  width: 1920px;
-  height: 212px;
+  width: calc(95.1vw + 94.8px); /*1920-399*/
+  height: calc(10.1vw + 18.8px); /*212-51*/
   top: -2px;
   left: 0px;
 }
 .cloudButton {
   position: absolute;
-  width: 1920px;
-  height: 194px;
-  top: 608px;
+  width: calc(96.9vw + 60px); /*1920-370*/
+  height:calc(9vw + 21.2px); /*194-50*/
+  top: calc(-9.7vw + 794px); /*608-763*/
 }
 .girlWithhorse {
   position: absolute;
-  width: 1674px;
-  height: 644px;
-  top: 156px;
-  left: 99px;
+  width: calc(72.9vw + 273.6px); /*1674-507*/
+  height: calc(20.9vw + 242px); /*644-309*/
+  top: calc(-21.6vw + 571.2px); /*156-502*/
+  left: calc(13.3vw - 155px); /*99- -113*/
 }
 .ChristTree {
   position: absolute;
-  width: 297px;
-  height: 371px;
-  top: 450px;
-  left: 1390px;
+  width: calc(9.1vw + 121.96px); /*297-213*/
+  height: calc(11.3vw 153.957px); /*371-267*/
+  top: calc(2.8vw + 395.7px); /*450-424*/
+  left: calc(58.4vw + 269.3px); /*1390-853*/
 }
 
 .QuestionForm {
-  width: 470px;
-  height: 547px;
-  margin: 140px 375px 113px 1075px;
+  width: calc(10.6vw + 266px); /*470-300*/
+  height: calc(7.6vw + 400.6px); /*547-425*/
   background: #ffffff;
   border: 1px solid #eaeaea;
   box-shadow: 0 4px 10px #eaeaea;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
+  position: absolute;
+  top: calc(2.6vw + 90.8px); /*140-99*/
+  left: calc(66.6vw - 203px); /*1075-10*/
+
+  /* margin-top: 20px; */
 }
 .QuestionForm h2 {
-  width: 339px;
-  margin: 60px 65px 15px 65px;
-  font-size: 35px;
+  width: calc(7.9vw + 186.6px); /*339-212*/
+  margin: calc(1.3vw + 36px) calc(1.4vw + 38.6px) 15px calc(1.4vw + 38.6px); /*60-40 65-43 15 65-43*/
+  font-size: calc(0.8vw + 19.4px); /*35-22*/
   font-weight: 400;
   line-height: 100%;
 }
 .QuestionForm p {
-  font-size: 15px;
+  font-size: calc(0.1vw + 12.6px); /*15-13*/
   font-weight: 400;
   line-height: 140%;
   text-align: center;
   color: #7e7e7e;
-  width: 370px;
-  margin-left: 50px;
-  margin-bottom: 30px;
+  width: calc(5.8vw + 259.6px); /*370-278*/
+  margin-left: calc(2.4vw + 3.2px); /*50-11*/
+  margin-bottom:  calc(0.6vw + 18px); /*30-20*/
+}
+span{
+  color: #7E7E7E;
+  font-weight: 700;
 }
 .formInfo button {
-  width: 330px;
-  margin: 0 0 30px 70px;
+  width: calc(6.6vw + 204px); /*330-225*/
+  margin: 0 0 calc(0.3vw + 24px) calc(2.7vw + 18.4px); /*30-25 70-27*/
 }
 .formInfo {
 }
 .formInfo input {
-  width: 330px;
-  height: 61px;
-  margin-left: 70px;
+  width: calc(6.6vw + 204px); /*330-225*/
+  height: calc(0.7vw + 47.8px); /*61-50*/
+  margin-left: calc(2vw + 31.6px); /*70-38*/
   margin-bottom: 20px;
-  padding-left: 21px;
+  padding-left: calc(0.4vw + 12.6px); /*21-14*/
   border-radius: 5px;
   border: 1px solid #8f8f8f;
 }
@@ -598,7 +683,7 @@ h5 {
   font-weight: 400;
   line-height: 17.58px;
   color: #8a8a8a;
-  display: block;
+  display: flex;
 }
 /* Отвечаем на вопросы finish*/
 
@@ -853,6 +938,9 @@ footer {
     display: none;
   }
   .Contacttreeright {
+    display: none;
+  }
+  .ChristTree{
     display: none;
   }
 }

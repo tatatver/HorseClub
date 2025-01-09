@@ -21,10 +21,11 @@
       <div class="headerMenu">
         <div class="logo"><img src="./img/logo.png" alt="" /></div>
         <div class="menu">
-          <h4>О нас</h4>
-          <h4>Услуги и цены</h4>
-          <h4>Фотоальбом</h4>
-          <h4>Контакты</h4>
+          <a href="#aboutUs"> <h4>О нас</h4></a>
+          <a href="#direction"> <h4>Услуги и цены</h4></a>
+          <a href="#visitor"><h4>Фотоальбом</h4></a>
+          <a href="#contact"> <h4>Контакты</h4></a>
+         
         </div>
         <div class="phoneNumber">
           <div class="phoneNumberImg"><img src="./img/tel.svg" alt="" /></div>
@@ -42,20 +43,19 @@
         </p>
         <button class="primary">записаться</button>
       </div>
-      <img class="horseSmall" src="./img/1horseSmall.png" alt="">
-      <img class="ambar" src="./img/1ambar.png" alt="">
+      <img class="horseSmall" src="./img/1horseSmall.png" alt="" />
+      <img class="ambar" src="./img/1ambar.png" alt="" />
       <img class="birdbg" src="./img/1birds.png" alt="" />
       <img class="horse1bg" src="./img/1horse.png" alt="" />
       <img class="cloudbg" src="./img/1cloud.png" alt="" />
-      <img class="tree" src="./img/1tree.png" alt="">
+      <img class="tree" src="./img/1tree.png" alt="" />
       <img class="treerightbg" src="./img/1treeRight.png" alt="" />
       <img class="treeleftbg" src="./img/1treeLeft.png" alt="" />
-    
     </section>
 
     <!-- О нашем клубе -->
     <section>
-      <h2 class="aboutUsTitle">О нашем клубе</h2>
+      <h2 class="aboutUsTitle"><a name="aboutUs"> О нашем клубе </a></h2>
       <div class="aboutUsWrapper">
         <div class="aboutImg">
           <img src="./img/hourseJump.png" alt="" />
@@ -140,7 +140,7 @@
     <!-- Направления клуба -->
     <section class="bgDirection">
       <div class="directionTitle">
-        <h2>Направления клуба</h2>
+        <h2><a name="direction"></a> Направления клуба</h2>
         <h5>Подзаголовок блока</h5>
       </div>
       <div class="directionWrapper">
@@ -199,7 +199,7 @@
     <!-- Наши посетители -->
     <section>
       <div class="splide visitor1" aria-labelledby="carousel-heading">
-        <h2 class="visitorTitle">Наши посетители</h2>
+        <h2 class="visitorTitle"><a name="visitor"> Наши посетители</a></h2>
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide visitorCard">
@@ -218,7 +218,7 @@
               <img src="./img/visitor5.png" alt="" />
             </li>
             <!-- доп фотки -->
-            <!-- <li class="splide__slide visitorCard">
+            <li class="splide__slide visitorCard">
               <img src="./img/visitor6.png" alt="" />
             </li>
             <li class="splide__slide visitorCard">
@@ -232,7 +232,7 @@
             </li>
             <li class="splide__slide visitorCard">
               <img src="./img/visitor10.png" alt="" />
-            </li> -->
+            </li>
           </ul>
         </div>
       </div>
@@ -255,7 +255,7 @@
               <img src="./img/visitor10.png" alt="" />
             </li>
             <!-- доп фотки -->
-            <!-- <li class="splide__slide visitorCard">
+            <li class="splide__slide visitorCard">
               <img src="./img/visitor1.png" alt="" />
             </li>
             <li class="splide__slide visitorCard">
@@ -269,7 +269,7 @@
             </li>
             <li class="splide__slide visitorCard">
               <img src="./img/visitor5.png" alt="" />
-            </li> -->
+            </li>
           </ul>
         </div>
       </div>
@@ -336,7 +336,45 @@
               </p>
             </div>
           </li>
+          <li class="splide__slide">
+            <div class="ourHorseCards">
+              <img src="./img/horse5.png" alt="" />
+              <h4>Хесана</h4>
+              <div class="directionborder"></div>
+              <p>
+                Уроки профессиональной верховой езды для любителей и начинающих
+              </p>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="ourHorseCards">
+              <img src="./img/horse5.png" alt="" />
+              <h4>Хесана</h4>
+              <div class="directionborder"></div>
+              <p>
+                Уроки профессиональной верховой езды для любителей и начинающих
+              </p>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="ourHorseCards">
+              <img src="./img/horse5.png" alt="" />
+              <h4>Хесана</h4>
+              <div class="directionborder"></div>
+              <p>
+                Уроки профессиональной верховой езды для любителей и начинающих
+              </p>
+            </div>
+          </li>
         </ul>
+        <!-- <ul class="splide__pagination">
+          <li><button class="splide__pagination__page"></button></li>
+          <li><button class="splide__pagination__page"></button></li>
+        </ul>
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev"><img src="./img/Vector.svg" alt="" /></button>
+          <button class="splide__arrow splide__arrow--next"><img src="./img/Vector.svg" alt="" /></button>
+        </div> -->
       </div>
     </section>
 
@@ -346,14 +384,13 @@
         <h2>Отвечаем на вопросы</h2>
         <p>
           Мы ответим на все ваши вопросы по телефону, или вы можете записаться
-          на бесплатное пробное занятие
+          на <span>бесплатное</span> пробное занятие
         </p>
         <form action="" class="formInfo">
           <input type="text" placeholder="Ваше имя" />
           <input type="tel" placeholder="Ваш телефон" />
           <button class="primary">Задать вопрос</button>
-          <label for=""
-            ><input type="checkbox" required />согласие на обработку данных
+          <label for=""><input type="checkbox" required />согласие на обработку данных
           </label>
         </form>
       </div>
@@ -369,7 +406,7 @@
 
       <div class="splide__track">
         <ul class="splide__list">
-          <!-- <li class="splide__slide">
+          <li class="splide__slide">
             <div class="feedbackCard">
               <div class="feedbackdetail">
                 <p>
@@ -393,7 +430,7 @@
               </div>
               <img class="quote" src="./img/quote.png" alt="" />
             </div>
-          </li> -->
+          </li>
 
           <li class="splide__slide">
             <div class="feedbackCard">
@@ -478,14 +515,15 @@
 
     <!-- карта -->
     <section class="mapForm">
-       <!-- <div class="map-container">
+      <a name="contact"></a>
+      <!-- <div class="map-container">
         <script
           type="text/javascript"
           charset="utf-8"
           async
           src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A564cabea7107d9b5bee1f969c18fb2d595903bcb3165dcfd9bda8780fc6b569a&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"
-        ></script> -->
-      </div>  
+        ></script> 
+      </div>  -->
       <div class="contactForm">
         <h2>Контакты</h2>
         <div class="directionborderContact"></div>
@@ -498,11 +536,11 @@
             <img class="Finishphone" src="./img/Finishphone.png" alt="" />
             <p>+7 (495) 000-00-00</p>
           </div>
-            <div class="contactInfo">
+          <div class="contactInfo">
             <img class="Finishemail" src="./img/Finishemail.png" alt="" />
             <p>mail@somemail.com</p>
           </div>
-            <div class="contactInfo">
+          <div class="contactInfo">
             <img class="Finishocloc" src="./img/Finishocloc.png" alt="" />
             <p>
               Пн-Пт: 10:00 - 19:00 <br />
@@ -512,35 +550,35 @@
           </div>
         </div>
         <div class="socialLogo">
-        <img src="./img/Finishinsta.png" alt="" />
-        <img src="./img/Finishyoutube.png" alt="" />
-        <img src="./img/Finishwatsapp.png" alt="" />
-        <img src="./img/FinishVK.png" alt="" />
+          <img src="./img/Finishinsta.png" alt="" />
+          <img src="./img/Finishyoutube.png" alt="" />
+          <img src="./img/Finishwatsapp.png" alt="" />
+          <img src="./img/FinishVK.png" alt="" />
+        </div>
       </div>
-      </div>
-      <img class="Contacttreeleft" src="./img/Contacttreeleft.png" alt="">
-      <img class="Contacttreeright" src="./img/Contacttreeright.png" alt="">
-      <img class="Pin" src="./img/pin.svg" alt="">
+      <img class="Contacttreeleft" src="./img/Contacttreeleft.png" alt="" />
+      <img class="Contacttreeright" src="./img/Contacttreeright.png" alt="" />
+      <img class="Pin" src="./img/pin.svg" alt="" />
     </section>
 
-<footer>
-  <div class="footerMenu">
-    <div class="footerlogo"><img src="./img/footerlogo.png" alt="" /></div>
-    <div class="menuTitle">
-      <h4>О нас</h4>
-      <h4>Услуги и цены</h4>
-      <h4>Фотоальбом</h4>
-      <h4>Контакты</h4>
-    </div>
-    <button>Заказать звонок</button>
-  </div>
+    <footer>
+      <div class="footerMenu">
+        <div class="footerlogo"><img src="./img/footerlogo.png" alt="" /></div>
+        <div class="menuTitle">
+          <a href="#aboutUs"><h4>О нас</h4></a>
+          <a href="#direction"> <h4>Услуги и цены</h4></a>
+          <a href="#visitor"><h4>Фотоальбом</h4></a>
+          <a href="#contact"><h4>Контакты</h4></a>
+          
+        </div>
+        <button>Заказать звонок</button>
+      </div>
 
-  <div class="accept">
-    <p>Соглашение на обработку персональных данных</p>
-    <p>Политика конфенденциальности</p>
-  </div>
-</footer>
-
+      <div class="accept">
+        <p>Соглашение на обработку персональных данных</p>
+        <p>Политика конфенденциальности</p>
+      </div>
+    </footer>
 
     <!-- слайдеры -->
     <script src="./splide-4.1.3/splide-4.1.3/dist/js/splide.min.js"></script>
@@ -582,6 +620,9 @@
       document.addEventListener("DOMContentLoaded", function () {
         var splide = new Splide(".splide.horse", {
           perPage: 5,
+          perMove: 1,
+          focus: "center",
+          pagination: true,
         });
         splide.mount();
       });
