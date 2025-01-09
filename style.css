@@ -275,6 +275,13 @@ h2 {
   font-family: "Philosopher Regular"; /*скачать шрифт*/
   text-align: center;
 }
+a{
+  font-size: calc(1.2vw + 17.2px); /*40-24*/
+  line-height: 90%;
+  font-weight: 400;
+  font-family: "Philosopher Regular"; /*скачать шрифт*/
+  text-align: center;
+}
 
 /*О нашем клубе start*/
 .aboutUsTitle {
@@ -287,7 +294,7 @@ h2 {
   margin: 0 337px 185px 145px; /*337-10*/
 }
 .aboutImg {
-  flex-basis: 870px;
+  flex-basis: calc(36.4vw + 171.667px);
   flex-grow: 1;
 }
 .aboutUsInfo {
