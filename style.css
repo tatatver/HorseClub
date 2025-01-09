@@ -184,7 +184,7 @@ text-align: center;
   display: flex;
   gap: 0 42px;
   margin-right: calc(1.4vw + 30.33px); /*57-41*/
-  width: calc(7.2vw + 289.7px); /*428-345*/
+  width: calc(8.2vw + 291.7px); /*428-345*/
 }
 .menu h4 {
   font-size: calc(0.2vw + 9.667px); /*13-11*/
@@ -1108,7 +1108,22 @@ footer {
 }
 .phoneNumberInfo p{
   font-size: calc(1vw + 6px);
+}
+.worldHorse{
 
+ margin-left: calc(4.5vw - 14.286px);
+}
+.worldHorse h1{
+  font-size: calc(2.9vw + 14.714px);
+  margin-bottom: calc(1.1vw + 11.429px);
+  font-weight: 700;
+  width: calc(41.5vw + 187.43px);
+}
+.borderLine{
+  height: 1px;
+  width: 26px;
+  background-color: #008139;
+  /* margin: 15px calc(106.9vw - 190px) ; */
 }
 }
 @media (max-width: 480px) {
