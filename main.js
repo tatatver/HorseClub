@@ -10,3 +10,4 @@ const menu = document.getElementById('burgermenu');
 burger.addEventListener('click', () => {
     menu.classList.toggle('open');
 });
+

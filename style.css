@@ -17,6 +17,24 @@
       format("svg"); /* Chrome < 4, Legacy iOS */
 }
 
+@font-face {
+  font-family: "Montserrat Alternates Bold";
+  src: url("./font/bfe3a897993eadf04caa188d7c25369a/fonts/montserrat_alternates_bold.eot"); /* IE 9 Compatibility Mode */
+  src: url("./font/bfe3a897993eadf04caa188d7c25369a/montserrat_alternates_bold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE < 9 */
+      url("./font/bfe3a897993eadf04caa188d7c25369a/montserrat_alternates_bold.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./font/bfe3a897993eadf04caa188d7c25369a/montserrat_alternates_bold.woff")
+      format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("./font/bfe3a897993eadf04caa188d7c25369a/montserrat_alternates_bold.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./font/bfe3a897993eadf04caa188d7c25369a/montserrat_alternates_bold.svg#montserrat_alternates_bold")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
 * {
   padding: 0;
   margin: 0;
@@ -25,6 +43,7 @@
   text-decoration: none;
   font-family: "Roboto";
   color: #222222;
+
   /* outline: 2px solid red; */
 }
 
@@ -92,21 +111,20 @@
   left: calc(37.2vw + 5.667px); /*719-184 -480*/
 }
 
-.burger{
+.burger {
   width: 77px;
   height: 29px;
   border: 1px solid #008139;
   border-radius: 3px;
- position: relative;
- margin-top: 15px;
- margin-left: 24px;
-z-index: 1;
-transition: transform .5s;
-z-index: 2;
+  position: relative;
+  margin: 5px 160px 0 24px;
+
+  z-index: 1;
+  transition: transform 0.5s;
+  z-index: 2;
 }
 
-
-.burger span{
+.burger span {
   position: absolute;
   width: 10px;
   height: 2px;
@@ -114,40 +132,37 @@ z-index: 2;
   left: 10px;
   top: 10px;
   margin-right: 5px;
-  transition: transform .5s, opacity .5s, background-color .5s;
+  transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
 }
-.burger span:nth-child(2){
+.burger span:nth-child(2) {
   transform: translateY(4px);
 }
-.burger span:nth-child(3){
+.burger span:nth-child(3) {
   transform: translateY(8px);
 }
-.burger p{
+.burger p {
   font-size: 15px;
   margin: 6px 10px 8px 25px;
 }
-
 
 .burgermenu {
   display: none;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -10px;
   width: 230px;
   height: 600px;
-  background-color: #0D0D0D;
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 0;
   justify-content: center;
-padding-top: 50px;
-border-right: 5px solid #008139;
-
+  padding-top: 50px;
+  border-right: 5px solid #008139;
 }
-.burgermenu h4{
-  color: #FFFFFF;
-font-size: 15px;
-font-weight: 400;
-text-transform: uppercase;
-
+.burgermenu h4 {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 .burgermenu h4:hover {
   font-size: calc(0.2vw + 9.667px);
@@ -156,15 +171,14 @@ text-transform: uppercase;
 }
 
 .burgermenu ul {
-width: 120px;
-height: 200px;
-text-align: center;
+  width: 120px;
+  height: 200px;
+  text-align: center;
 }
 
 .burgermenu li {
   margin: 20px 0;
 }
-
 
 .headerMenu {
   margin: 0px calc(32.6vw - 250px) calc(4.1vw + 9.66px) calc(31.8vw - 234px);
@@ -236,7 +250,6 @@ text-align: center;
   line-height: 107%;
 }
 
-
 .worldHorse p {
   width: calc(12.6vw + 282.8px); /*477 по макету*/ /*506-320*/
   font-family: "Alegreya Sans"; /*скачать шрифт*/
@@ -253,6 +266,9 @@ text-align: center;
   height: calc(1.7vw + 37.6px); /*70-43*/
   font-size: 15px;
   font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 1.5px;
+  font-family: "Montserrat Alternates Bold";
   border: none;
   border-radius: 5px;
   color: #6a5300;
@@ -275,7 +291,7 @@ h2 {
   font-family: "Philosopher Regular"; /*скачать шрифт*/
   text-align: center;
 }
-a{
+a {
   font-size: calc(1.2vw + 17.2px); /*40-24*/
   line-height: 90%;
   font-weight: 400;
@@ -285,97 +301,100 @@ a{
 
 /*О нашем клубе start*/
 .aboutUsTitle {
-  width: calc(8.9vw + 116.6px); /*267-141*/
-  margin: 0 calc(46.1vw - 58.4px) calc(2.2vw + 28px); /*826-89*/ /*70-35*/
+  width: 268px;
+  font-weight: 400;
+  font-size: 40px;
+  font-family: "Philosopher Regular";
+  margin: 0 826px 70px;
 }
 .aboutUsWrapper {
-  display: flex;
-  align-items: center;
-  margin: 0 337px 185px 145px; /*337-10*/
-}
-.aboutImg {
-  flex-basis: calc(36.4vw + 171.667px);
-  flex-grow: 1;
-}
-.aboutUsInfo {
-  flex-grow: 1000;
-}
-.aboutUsCards {
+  /* overflow: hidden; */
+  margin-left: 145px;
   display: grid;
-  grid-template-columns: 200px 230px;
-  grid-template-rows: 1fr 1fr;
-  gap: 24px 65px;
+  grid-template-rows: 117px 142px 224px;
+  grid-template-columns: 871px 248px 275px;
+  row-gap: 20px;
   grid-template-areas:
-    "1100 50"
-    "20 15";
+    "img card1 card2"
+    "img card3 card4"
+    "img info info";
 }
-.cards:nth-child(1) {
-  grid-area: "1100";
+
+.aboutUsImg img {
+  grid-area: img;
+  width: 871px;
 }
-.cards:nth-child(2) {
-  grid-area: "50";
+.aboutUsCardsText.card1 {
+  grid-area: card1;
+  width: 200px;
 }
-.cards:nth-child(3) {
-  grid-area: "20";
+.aboutUsCardsText.card2 {
+  grid-area: card2;
+  width: 224px;
 }
-.cards:nth-child(4) {
-  grid-area: "15";
+.aboutUsCardsText.card3 {
+  grid-area: card3;
   width: 248px;
 }
-.cards h5 {
-  width: 102px;
-  height: 67px;
+.aboutUsCardsText.card4 {
+  grid-area: card4;
+  width: 275px;
+}
+.aboutUsInfo {
+  grid-area: info;
+  width: 570px;
+}
+.aboutUsCardsText span {
   font-size: 42px;
   font-weight: 700;
   font-family: "Philosopher Regular";
   color: #008139;
 }
-.cards p {
+.aboutUsCardsText p {
   font-size: 17px;
   font-weight: 500;
-  line-height: 166%;
+  line-height: 147%;
+  color: #0b0b0b;
+  font-family: "Roboto";
 }
-.aboutUsText {
-  width: 570px;
-  margin-top: 41px;
+.aboutUsInfo p {
   font-size: 15px;
   font-weight: 400;
   line-height: 186%;
   color: #7e7e7e;
+  font-family: "Roboto";
 }
 
 /* Почему нас выбирают */
 .advantagesTitle {
-  margin-bottom: 60px;
+  margin-bottom: calc(2.2vw + 18px); /*60-20*/
+
   text-align: center;
 }
 .advantagesTitle h2 {
-  margin-bottom: 25px;
+  margin-bottom: calc(0.9vw + 7px); /*25-10*/
 }
 h5 {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 117%;
   color: #363434;
   font-weight: 300;
 }
 .advantages {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 0 29px;
-  width: 1171px;
-  margin: 0 374px 100px;
+  width: calc(31.3vw + 517px); /*1117-300*/
+  margin: 0 calc(32vw - 241px) /*375-10*/ 100px;
 }
 .adventagesCards {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 271px;
+  width: calc(-1.8vw + 305.8px); /*271-300*/
   text-align: center;
 }
-.adventagesCards img {
-  width: 113px;
-  height: 100px;
-}
+
 .adventagesCards:nth-child(1) img {
   width: 113px;
   height: 95px;
@@ -403,7 +422,7 @@ h5 {
   margin-bottom: 26px;
 }
 .adventagesCards p {
-  font-size: 15px;
+  font-size: calc(0.1vw + 12.6px); /*15-13*/
   font-weight: 400;
   line-height: 151%;
   color: #7e7e7e;
@@ -412,41 +431,46 @@ h5 {
 /* Направления клуба start*/
 .bgDirection {
   background-image: url(./img/background4section.png);
+  background-size: cover;
   background-repeat: no-repeat;
+  height: calc(44.9vw + 736px);
   position: relative;
+  overflow: hidden;
 }
 .girlonHorse {
   position: absolute;
-  width: 305px;
-  height: 530px;
-  top: 1027px;
-  left: 138px;
+  width: calc(13.7vw + 42.2px); /*305-86*/
+  height: calc(22.1vw + 78.2px); /*530-149*/
+  top: calc(23.6vw + 615px);
+  left: calc(15vw - 150px); /*138- -23*/
 }
 .boyonHorse {
   position: absolute;
-  width: 372px;
-  height: 532px;
-  top: 1036px;
-  left: 1465px;
+  width: calc(17.1vw + 43.2px); /*372-98*/
+  height: calc(24.4vw + 62.8px); /*532-141-*/
+  top: calc(22.4vw + 629.4px);
+  left: calc(76.7vw + 19.8px);
 }
 .clouds {
   position: absolute;
-  width: 1920px;
-  height: 168px;
-  top: 1428px;
+  width: calc(92.6vw + 142.8px); /*1920-439*/
+  height: calc(4.9vw + 73.2px); /*168-89*/
+  top: calc(40.4vw + 652.8px); /*1428-782*/
+  left: calc(1.4vw - 26.4px); /*0- -22*/
 }
 .directionTitle {
-  margin-bottom: 75px;
+  margin-bottom: calc(2.5vw + 27px); /*75-35*/
+  padding-top: 100px;
   text-align: center;
 }
 .directionTitle h2 {
-  margin-bottom: 25px;
+  margin-bottom: calc(0.9vw + 7px); /*25-10*/
 }
 .directionWrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 0 30px;
-  margin: 0 375px;
+  margin: 0 calc(38.6vw - 365.87px);
 }
 .directionCards {
   border: 1px solid #eaeaea;
@@ -455,47 +479,50 @@ h5 {
   box-shadow: 0 4px 10px #eaeaea;
   display: flex;
   flex-wrap: wrap;
-  width: 370px;
+  width: calc(7.6vw + 223.9px);
   justify-content: center;
 }
 .directionCards:nth-child(odd) {
-  height: 399px;
+  height: calc(10.8vw + 192.39px);
 }
 .directionCards:nth-child(even) {
-  height: 474px;
+  height: calc(14.6vw + 194px);
 }
 .directionCards:nth-child(5) {
-  margin-top: 75px;
+  margin-top: calc(3.7vw + 4.043px);
 }
 .directionCards img {
+  width: calc(7.6vw + 173.9px);
+  height: calc(4.2vw + 138px);
   border-radius: 5px;
   position: relative;
   top: -25px;
-  margin-bottom: calc(0.4vw + 17.8px); /*25-19*/
+  margin-bottom: calc(1.7vw - 13.174px);
 }
 .directionCards h3 {
-  font-size: 23px;
+  font-size: calc(0.9vw + 6.304px);
   font-weight: 500;
   line-height: 117%; /*26.95-23*/
-  width: 237px;
+  width: 243px;
   text-align: center;
 }
 .directionborder {
   height: 1px;
   width: 26px;
   background-color: #008139;
-  margin: 25px 150px;
+  margin: calc(1.1vw + 4.13px) calc(1.4vw + 122.87px);
 }
 .directionCards p {
   width: 280px;
-  font-size: 15px;
+  font-size: calc(0.2vw + 10.826px);
   font-weight: 400;
   line-height: 140%; /*21-15*/
   color: #7e7e7e;
-  margin-bottom: 45px;
+  margin-bottom: calc(1.4vw + 17.87px);
+  text-align: center;
 }
 .bgDirection button {
-  margin: 50px 825px 421px;
+  margin: calc(1.3vw + 26px) calc(46.9vw - 75px) calc(15.9vw + 116.2px); /*50-30  825-75 421-167 */
 }
 
 /* Направления клуба finish*/
@@ -503,6 +530,7 @@ h5 {
 /*Наши посетители start*/
 .visitorTitle {
   margin-bottom: calc(2.2vw + 28px); /*70-35*/
+  margin-top: 107px;
 }
 /* .visitorGrid {
   display: flex;
@@ -986,6 +1014,8 @@ footer {
 .menuTitle h4 {
   color: #eaeaea;
   font-weight: 400;
+  font-size: 13px;
+  padding-top: 10px;
 }
 .footerMenu button {
   width: calc(3vw + 144px);
@@ -1011,10 +1041,10 @@ footer {
   text-decoration: underline;
 }
 @media (max-width: 1920px) {
-  .burger{
+  .burger {
     display: none;
   }
-  .burgermenu{
+  .burgermenu {
     display: none;
   }
 }
@@ -1028,9 +1058,209 @@ footer {
   .ChristTree {
     display: none;
   }
+  .headerMenu {
+    width: 960px;
+    margin: 0 20px 56px 20px;
+  }
+  .menu {
+    padding-top: 20px;
+    width: 428px;
+  }
+  .phoneNumber {
+    width: 186px;
+  }
+  .phoneNumberInfo {
+    gap: 5px 0;
+    padding-top: 3px;
+    padding-left: 9px;
+  }
+  .worldHorse {
+    margin-left: 20px;
+  }
+  .borderLineOne {
+    width: 26px;
+    height: 1px;
+    background-color: #8f8f8f;
+    position: absolute;
+    top: 253px;
+  }
+  .horse1bg {
+    position: absolute;
+    width: 365px;
+    height: 437px;
+    top: 213px;
+    left: 555px;
+  }
+  .cloudbg {
+    position: absolute;
+    width: 1266px;
+    height: 135px;
+    top: 522px;
+  }
+  .treerightbg {
+    position: absolute;
+    width: 61px;
+    height: 229px;
+    top: 424px;
+    left: 939px;
+  }
+  .treeleftbg {
+    position: absolute;
+    width: 100px;
+    height: 207px;
+    top: 424px;
+  }
+  .tree {
+    position: absolute;
+    width: 212px;
+    height: 157px;
+    top: 408px;
+    left: 40px;
+  }
+  .ambar {
+    position: absolute;
+    width: 259px;
+    height: 116px;
+    top: 488px;
+    left: 228px;
+  }
+  .horseSmall {
+    position: absolute;
+    width: 114px;
+    height: 111px;
+    top: 478px;
+    left: 451px;
+  }
+ 
+  /* О нашем клубе start */
+  .aboutUsTitle {
+    width: 201px;
+    font-size: 30px;
+    margin: 89px 399px 21px 400px;
+  }
+  .aboutUsWrapper {
+    margin-left: 15px;
+    display: grid;
+    grid-template-rows: 101px 126px 114px;
+    grid-template-columns: 480px 248px 265px;
+    row-gap: 20px;
+    grid-template-areas:
+      "img card1 card2"
+      "img card3 card4"
+      "info info info";
+  }
+  .aboutUsImg img {
+    grid-area: img;
+    width: 480px;
+  }
+  .aboutUsCardsText.card1 {
+    grid-area: card1;
+    width: 176px;
+    padding-top: 40px;
+  }
+  .aboutUsCardsText.card2 {
+    grid-area: card2;
+    width: 197px;
+    padding-top: 40px;
+  }
+  .aboutUsCardsText.card3 {
+    grid-area: card3;
+    width: 248px;
+    padding-top: 40px;
+  }
+  .aboutUsCardsText.card4 {
+    grid-area: card4;
+    width: 255px;
+    padding-top: 40px;
+  }
+  .aboutUsInfo {
+    grid-area: info;
+    width: 960px;
+  }
+  .aboutUsCardsText span {
+    font-size: 32px;
+  }
+  .aboutUsCardsText p {
+    font-size: 15px;
+    line-height: 166%;
+    margin: 0;
+  }
+  .aboutUsInfo p {
+    font-size: 13px;
+    line-height: 153%;
+    padding-top: 34px;
+  } 
+  /* finish */
+
+
+  /* 
+  footer{
+    height: 100%;
+  }
+  .footerMenu {
+    margin-left:  20px;
+    width: 960px;
+  }
+  .menuTitle{
+    width: 396px;
+  }
+  .accept{
+    width: 486px;
+    margin-left: 20px;
+    padding-bottom: 35px;
+  } */
+}
+@media (max-width: 950px) {
+  .bgDirection {
+    background-position: center 8px;
+    position: relative;
+    height: 1414px;
+  }
+  .directionTitle {
+    padding-top: 0;
+    margin-bottom: 50px;
+  }
+  .girlonHorse {
+    position: absolute;
+    width: calc(13.7vw + 42.2px); /*305-86*/
+    height: calc(22.1vw + 78.2px); /*530-149*/
+    top: 960px;
+    left: calc(10.1vw - 55.2px); /*138- -23*/
+  }
+  .boyonHorse {
+    position: absolute;
+    width: calc(17.1vw + 43.2px); /*372-98*/
+    height: calc(24.4vw + 62.8px); /*532-141-*/
+    top: calc(21.4vw + 624.4px); /*1036-693*/
+    left: calc(75.7vw + 11.8px); /*1465-254*/
+  }
+  .clouds {
+    position: absolute;
+    width: calc(92.6vw + 142.8px); /*1920-439*/
+    height: calc(4.9vw + 73.2px); /*168-89*/
+    top: calc(40.4vw + 652.8px); /*1428-782*/
+    left: calc(1.4vw - 26.4px); /*0- -22*/
+  }
+  .directionWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px 20px;
+    margin-left: 20px;
+  }
+  .directionCards:nth-child(odd) {
+    width: 350px;
+    height: 300px;
+  }
+  .directionCards:nth-child(even) {
+    width: 350px;
+    height: 300px;
+  }
+  .directionCards:nth-child(5) {
+    margin-top: 0;
+  }
 }
 
-@media (max-width: 765px) {
+@media (max-width: 769px) {
   .primary.desc {
     display: none;
   }
@@ -1076,13 +1306,229 @@ footer {
     gap: 10px;
     justify-content: center;
   }
-  .menu{
+
+  .headerMenu {
+    margin: 0 0 69px 0;
+    padding-top: 8px;
+  }
+  .logo img {
+    width: 120px;
+    height: 39px;
+    margin-left: 20px;
+    margin-right: 80px;
+  }
+  .menu {
+    width: 345px;
+    gap: 0 20px;
+  }
+  .menu a {
+    font-size: 11px;
+  }
+  .worldHorse h1 {
+    font-size: 37px;
+  }
+  .worldHorse p {
+    font-size: 16px;
+    margin: 20px 45px;
+  }
+  .bgHeader {
+    height: 541px;
+  }
+  .birdbg {
+    position: absolute;
+    width: calc(12.3vw + 35.6px); /*272-75*/
+    height: calc(3.9vw + 11.6px); /*86-24*/
+    top: 95px;
+    left: 602px;
+  }
+  .horse1bg {
+    position: absolute;
+    width: 329px;
+    height: 371px;
+    top: 127px;
+    left: 410px;
+  }
+  .cloudbg {
+    position: absolute;
+    width: 1266px;
+    height: 115px;
+    top: 384px;
+  }
+  .treerightbg {
+    position: absolute;
+    width: 42px;
+    height: 117px;
+    top: 359px;
+    left: 726px;
+  }
+  .treeleftbg {
+    position: absolute;
+    width: 68px;
+    height: 141px;
+    top: 359px;
+    left: -18px;
+  }
+  .tree {
+    position: absolute;
+    width: 158px;
+    height: 117px;
+    top: 333px;
+    left: -18px;
+  }
+  .ambar {
+    position: absolute;
+    width: 207px;
+    height: 93px;
+    top: 348px;
+    left: 127px;
+  }
+  .horseSmall {
+    position: absolute;
+    width: 114px;
+    height: 111px;
+    top: 330px;
+    left: 299px;
+  }
+  /* О нашем клубе start */
+  .aboutUsTitle {
+    font-size: 27px;
+    margin: 5px 283px 38px 284px;
+  }
+  .aboutUsWrapper {
+    display: grid;
+    grid-template-rows: 95px 117px 100px;
+    grid-template-columns: 357px 170px 230px;
+    row-gap: 36px;
+    grid-template-areas:
+      "img card1 card2"
+      "img card3 card4"
+      "info info info";
+  }
+  .aboutUsImg img {
+    grid-area: img;
+    width: 451px;
+    position: relative;
+    left: -57px;
+  }
+  .aboutUsCardsText.card1 {
+    grid-area: card1;
+    width: 177px;
+    padding-top: 0px;
+    padding-top: 40px;
+  }
+  .aboutUsCardsText.card2 {
+    grid-area: card2;
+    width: 217px;
+    padding-top: 0px;
+    padding-top: 40px;
+  }
+  .aboutUsCardsText.card3 {
+    grid-area: card3;
+    width: 170px;
+    padding-top: 0px;
+  }
+  .aboutUsCardsText.card4 {
+    grid-area: card4;
+    width: 235px;
+    padding-top: 0px;
+  }
+  .aboutUsInfo p {
+    grid-area: info;
+    width: 728px;
+    margin: 0 20px;
+  }
+  /* finish */
+
+  .borderLine {
+    height: 1px;
+    width: 26px;
+    background-color: #008139;
+    /* margin: 15px calc(106.9vw - 190px) ; */
+  }
+  .advantages {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: calc(117.4vw - 18px);
+  }
+  .adventagesCards {
+    width: calc(-27.7vw + 388px);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .bgDirection {
+    background-position: center 8px;
+    position: relative;
+    height: 1367px;
+  }
+
+  .girlonHorse {
+    position: absolute;
+    width: 157px;
+    height: 272px;
+    top: 1076px;
+    left: 7px;
+  }
+  .boyonHorse {
+    position: absolute;
+    width: 189px;
+    height: 270px;
+    top: 1076px;
+    left: 594px;
+  }
+  .clouds {
+    position: absolute;
+    width: 1920px;
+    height: 168px;
+    top: 1200px;
+    left: -460px;
+  }
+  .primary {
+    font-size: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .worldHorse h1 {
+    text-align: center;
+  }
+  .bgDirection {
+    background-position: center 280px;
+    position: relative;
+    height: 1270px;
+    background-size: 1218px 995px;
+  }
+  .girlonHorse {
+    position: absolute;
+    width: 113px;
+    height: 196px;
+    top: 1054px;
+    left: -13px;
+  }
+  .boyonHorse {
+    position: absolute;
+    width: 139px;
+    height: 199px;
+    top: 1054px;
+    left: 380px;
+  }
+  .clouds {
+    position: absolute;
+    width: 769px;
+    height: 103px;
+    top: 1170px;
+    left: -91px;
+  }
+
+  .menu {
     display: none;
   }
-  
-  .burger{
+
+  .burger {
     display: block;
- 
+    margin-left: 0;
+    margin-right: 143px;
   }
   .burgermenu.open {
     display: flex;
@@ -1090,58 +1536,211 @@ footer {
     height: 600px;
     z-index: 1;
     margin-left: 0;
-}
+  }
 
-  .headerMenu{
-    width: calc(1vw - 20px);
+  .headerMenu {
+    width: 460px;
     margin-left: 10px;
-    }
-  .logo{
+    margin-bottom: 74px;
+  }
+  .logo img {
     width: calc(6.9vw + 66.875px);
     height: calc(2.2vw + 21.87px);
-    margin: 15px 24px 0 10px;
+    margin: 0;
   }
-.phoneNumber{
-  width: calc(11.1vw + 56.6px); /*142-110*/
-  margin-right: 10px;
-  margin-left: calc(56.6vw - 111.6px);
-}
-.phoneNumberInfo p{
-  font-size: calc(1vw + 6px);
-}
-.worldHorse{
-
- margin-left: calc(4.5vw - 14.286px);
-}
-.worldHorse h1{
-  font-size: calc(2.9vw + 14.714px);
-  margin-bottom: calc(1.1vw + 11.429px);
-  font-weight: 700;
-  width: calc(41.5vw + 187.43px);
-}
-.borderLine{
-  height: 1px;
-  width: 26px;
-  background-color: #008139;
-  /* margin: 15px calc(106.9vw - 190px) ; */
-}
-}
-@media (max-width: 480px) {
+  .phoneNumber {
+    width: 110px;
+    margin: 0;
+    margin-top: 5px;
+    padding: 0;
+  }
+  .phoneNumberImg img {
+    width: 10px;
+    height: 10px;
+    margin-right: 2px;
+  }
+  .phoneNumberInfo {
+    padding-left: 0;
+  }
+  .phoneNumberInfo p:nth-child(1) {
+    font-size: 11px;
+  }
+  .phoneNumberInfo p:nth-child(2) {
+    font-size: 9px;
+  }
+  .worldHorse {
+    margin-left: calc(4.5vw - 14.286px);
+  }
   .worldHorse h1 {
+    font-size: 33px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    width: 456px;
+  }
+  .borderLineOne {
+    width: 15px;
+    top: 209px;
+    left: 233px;
+  }
+  .worldHorse p {
+    width: 397px;
+    margin-left: 45px;
+    font-size: 16px;
     text-align: center;
   }
- 
-  
-  
-}
-@media (max-width: 450px) {
+  .primary {
+    margin-left: 150px;
+  }
+  /* О нашем клубе start */
+  .aboutUsTitle {
+    font-size: 27px;
+    margin: 49px 149px 40px 150px;
+  }
+  .aboutUsImg img {
+    display: none;
+  }
+  .aboutUsWrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-columns: 220px 220px;
+    row-gap: 30px;
+    align-items: center;
+    column-gap: 20px;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "info info";
+  }
+  .aboutUsCardsText.card1 {
+    grid-area: card1;
+    width: 220px;
+    padding-top: 0;
+  }
+  .aboutUsCardsText.card2 {
+    grid-area: card2;
+    width: 220px;
+    padding-top: 0;
+  }
+  .aboutUsCardsText.card3 {
+    grid-area: card3;
+    width: 220px;
+  }
+  .aboutUsCardsText.card4 {
+    grid-area: card4;
+    width: 220px;
+  }
+  .aboutUsInfo p {
+    grid-area: info;
+    width: 460px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .aboutUsInfo {
+    width: 460px;
+    padding: 0;
+    margin: 0;
+  }
+  .aboutUsCardsText {
+    text-align: center;
+  }
+  /* finish */
+
+  .bgHeader {
+    background-size: 1122px 595px;
+    margin-bottom: 50px;
+    /* background-size: cover; */
+  }
+  .birdbg {
+    position: absolute;
+    width: calc(16.3vw + 23px); /*272-75*/
+    height: calc(5vw + 8px); /*86-24*/
+    top: calc(-1.9vw + 97px); /*157-91*/
+    left: calc(-11.9vw + 75px); /*1409-112*/
+  }
+  .horse1bg {
+    position: absolute;
+    width: 168px;
+    height: 193px;
+    top: 332px;
+    left: 288px;
+  }
+  .cloudbg {
+    position: absolute;
+    width: 629px;
+    height: 83px;
+    top: 456px;
+  }
+  .treerightbg {
+    position: absolute;
+    width: 34px; /*167-34*/
+    height: 131px; /*632-131*/
+    top: 420px; /*241-420*/
+    left: 447px; /*1753-286*/
+  }
+  .treeleftbg {
+    position: absolute;
+    width: 44px; /*211-44*/
+    height: 93px; /*435-93*/
+    top: 447px; /*449-457*/
+    left: 0;
+  }
+  .tree {
+    position: absolute;
+    width: 158px; /*389-146*/
+    height: 117px; /*288-108*/
+    top: 365px; /*454-390 */
+    left: -79px; /*-1 - -102*/
+  }
+  .ambar {
+    position: absolute;
+    width: 207px; /*428-180*/
+    height: 93px; /*192-81*/
+    top: 395px;
+    left: -1px; /*337- -40*/
+  }
   .horseSmall {
-    display: none;
+    position: absolute;
+    width: 93px; /*213-93 -480*/
+    height: 90px; /*209-90 -480*/
+    top: 386px;
+    left: 193px;
   }
-  .phoneNumber{
-    display: none;
+
+  .directionWrapper {
+    margin-left: 5px;
+    gap: calc(-12.5vw + 100px) 10px;
   }
+  .directionCards:nth-child(odd) {
+    width: calc(-43.7vw + 440px);
+    height: calc(18.8vw + 200px);
+  }
+  .directionCards:nth-child(even) {
+    width: calc(-43.7vw + 440px);
+    height: calc(18.8vw + 200px);
+  }
+  .directionCards img {
+    width: calc(-31.2vw + 350px);
+    height: calc(-12.5vw + 190px);
+  }
+  .directionborder {
+    margin: 10px calc(-21.9vw + 207px);
+  }
+  .directionCards p {
+    margin-bottom: 23px;
+    font-size: 13px;
+  }
+  /* .menuTitle{
+  margin-left: 20px;
 }
+.footerMenu button{
+  margin-left: 135px;
+}
+.footerlogo{
+  margin-left: 135px;
+} */
+}
+
 @media (max-width: 445px) {
   .primary.desc {
     display: none;
@@ -1184,5 +1783,172 @@ footer {
     gap: 10px;
     justify-content: center;
     /* font-size: 9px; */
+  }
+}
+@media (max-width: 320px) {
+  /* Окунитесь в мир лошадей вместе с нами */
+  .phoneNumber {
+    display: none;
+  }
+  .horseSmall {
+    display: none;
+  }
+  .headerMenu {
+    padding: 15px 10px;
+  }
+  .logo img {
+    width: 89px;
+    height: 29px;
+  }
+  .burger {
+    margin-left: 125px;
+  }
+  .burgermenu.open {
+    width: 320px;
+    height: 550px;
+  }
+ 
+  .worldHorse h1 {
+    width: 320px;
+    font-size: 24px;
+    margin-left: 5px;
+  }
+  .borderLineOne {
+    width: 15px;
+    top: 200px;
+    left: 152px;
+  }
+  .worldHorse p{
+    width: 320px;
+    font-size: 13px;
+    margin: 30px 5px 35px 5px;
+  }
+  .primary{
+    margin-left: 75px;
+  }
+
+  /* О нашем клубе start */
+  .aboutUsTitle {
+    font-size: 21px;
+    margin: 56px 89px 35px 90px;
+  }
+  .aboutUsWrapper {
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: repeat(4, 80px) 210px;
+    grid-template-columns: 300px;
+    row-gap: 30px;
+    justify-items: center; /* По горизонтали */
+    align-items: center;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "info";
+  }
+  .aboutUsCardsText.card1 {
+    grid-area: card1;
+    width: 140px;
+  }
+  .aboutUsCardsText.card2 {
+    grid-area: card2;
+    width: 163px;
+  }
+  .aboutUsCardsText.card3 {
+    grid-area: card3;
+    width: 200px;
+  }
+  .aboutUsCardsText.card4 {
+    grid-area: card4;
+    width: 207px;
+  }
+  .aboutUsInfo p {
+    grid-area: info;
+    width: 300px;
+    font-size: 12px;
+    line-height: 158%;
+  }
+  .aboutUsInfo {
+    width: 298px;
+  }
+  .aboutUsCardsText p {
+    font-size: 12px;
+  }
+  /* finish */
+  .bgHeader {
+    background-size: 941px 615px;
+    /* background-size: cover; */
+    margin-bottom: 50px;
+  }
+  .horse1bg {
+    position: absolute;
+    width: 168px;
+    height: 193px;
+    top: 342px;
+    left: 120px;
+  }
+  .cloudbg {
+    position: absolute;
+    width: 629px;
+    height: 83px;
+    top: 461px;
+  }
+  .treerightbg {
+    position: absolute;
+    width: 34px; /*167-34*/
+    height: 131px; /*632-131*/
+    top: 420px; /*241-420*/
+    left: 286px; /*1753-286*/
+  }
+  .treeleftbg {
+    position: absolute;
+    width: 44px; /*211-44*/
+    height: 93px; /*435-93*/
+    top: 447px; /*449-457*/
+    left: 0;
+  }
+  .tree {
+    position: absolute;
+    width: 146px; /*389-146*/
+    height: 108px; /*288-108*/
+    top: 365px; /*454-390 */
+    left: -110px; /*-1 - -102*/
+  }
+  .ambar {
+    position: absolute;
+    width: 180px; /*428-180*/
+    height: 81px; /*192-81*/
+    top: 421px;
+    left: -49px;
+  }
+  /* Окунитесь в мир лошадей вместе с нами finish*/
+
+  .bgDirection {
+    background-position: center 1584px;
+    position: relative;
+    height: 2105px;
+    background-size: 1093px 523px;
+  }
+  .girlonHorse {
+    position: absolute;
+    width: 86px;
+    height: 149px;
+    top: 1941px;
+    left: -23px;
+  }
+  .boyonHorse {
+    position: absolute;
+    width: 98px;
+    height: 141px;
+    top: 1941px;
+    left: 254px;
+  }
+  .clouds {
+    position: absolute;
+    width: 439px;
+    height: 68px;
+    top: 2036px;
+    left: -22px;
   }
 }
